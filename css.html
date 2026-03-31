@@ -1,0 +1,1211 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8428793459037062"
+     crossorigin="anonymous"></script>
+<meta name="google-adsense-account" content="ca-pub-8428793459037062">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guía Completa de CSS - Hojas de Estilo en Cascada</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2rem 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        header h1 {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            font-size: 2.5rem;
+        }
+
+        nav {
+            background-color: #333;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav ul {
+            list-style: none;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: #667eea;
+        }
+
+        main {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 20px;
+        }
+
+        section {
+            background: white;
+            margin-bottom: 2rem;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        section h2 {
+            color: #667eea;
+            margin-bottom: 1rem;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 0.5rem;
+        }
+
+        section h3 {
+            color: #764ba2;
+            margin-top: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        section h4 {
+            color: #764ba2;
+            margin-top: 1rem;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .definition {
+            background-color: #f0f4ff;
+            border-left: 4px solid #667eea;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 4px;
+        }
+
+        .definition strong {
+            color: #667eea;
+        }
+
+        pre {
+            background-color: #282c34;
+            color: #abb2bf;
+            padding: 1.5rem;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin: 1rem 0;
+            font-family: 'Courier New', monospace;
+            line-height: 1.5;
+        }
+
+        code {
+            font-family: 'Courier New', monospace;
+            background-color: #f0f0f0;
+            padding: 0.2rem 0.4rem;
+            border-radius: 3px;
+            color: #d63384;
+        }
+
+        pre code {
+            background-color: transparent;
+            color: #abb2bf;
+            padding: 0;
+        }
+
+        ul, ol {
+            margin-left: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        .example-box {
+            background-color: #fffbea;
+            border: 1px solid #ffd700;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 4px;
+        }
+
+        .example-box strong {
+            color: #ff6b00;
+        }
+
+        .box-model-diagram {
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 4px;
+            text-align: center;
+            font-family: monospace;
+        }
+
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+        }
+
+        .comparison-table th,
+        .comparison-table td {
+            border: 1px solid #ddd;
+            padding: 0.75rem;
+            text-align: left;
+        }
+
+        .comparison-table th {
+            background-color: #667eea;
+            color: white;
+        }
+
+        .comparison-table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+
+        footer p {
+            margin: 0.5rem 0;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8rem;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+
+            main {
+                padding: 0 15px;
+            }
+
+            section {
+                padding: 1.5rem;
+            }
+
+            .comparison-table {
+                font-size: 0.9rem;
+            }
+
+            .comparison-table th,
+            .comparison-table td {
+                padding: 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+ <nav>
+        <a href="index.html">Inicio</a> |
+        <a href="html.html">HTML</a> |
+        <a href="css.html">CSS</a> |
+        <a href="java.html">Java</a> |
+        <a href="python.html">Python</a> |
+        <a href="privacidad.html">privacidad</a>
+    </nav>
+    <header>
+        <h1>🎨 Guía Completa de CSS</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#que-es-css">¿Qué es CSS?</a></li>
+            <li><a href="#separacion">Separación Contenido</a></li>
+            <li><a href="#selectores">Selectores</a></li>
+            <li><a href="#propiedades">Propiedades</a></li>
+            <li><a href="#cascada">Cascada y Prioridad</a></li>
+            <li><a href="#responsivo">Diseño Responsivo</a></li>
+            <li><a href="#tipos-css">Tipos de CSS</a></li>
+            <li><a href="#class-id">Class vs ID</a></li>
+            <li><a href="#box-model">Box Model</a></li>
+            <li><a href="#animaciones">Animaciones</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <!-- Sección 1: ¿Qué es CSS? -->
+        <section id="que-es-css">
+            <h2>1. ¿Qué es CSS y para qué sirve?</h2>
+            
+            <p>CSS (Cascading Style Sheets o Hojas de Estilo en Cascada) es un lenguaje utilizado para definir la apariencia visual de una página web. Mientras que HTML se encarga de la estructura (títulos, párrafos, imágenes), CSS se utiliza para darle estilo, es decir, colores, tamaños, espacios, alineaciones y diseño en general.</p>
+
+            <p>Gracias a CSS, una página web puede pasar de ser un documento simple y sin formato a una interfaz atractiva y fácil de usar. Por ejemplo, puedes cambiar el color de fondo, modificar el tipo de letra, centrar contenido o incluso crear animaciones.</p>
+
+            <p>CSS es fundamental en el desarrollo web moderno, ya que permite mejorar la experiencia del usuario y hacer que los sitios sean visualmente agradables y profesionales.</p>
+
+            <h3>Ejemplo Básico</h3>
+            <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+body {
+  background-color: lightblue;
+}
+h1 {
+  color: navy;
+  text-align: center;
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;h1&gt;Hola mundo&lt;/h1&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+            <p>En este ejemplo, CSS cambia el fondo a azul claro y centra el texto.</p>
+        </section>
+
+        <!-- Sección 2: Separación entre contenido y diseño -->
+        <section id="separacion">
+            <h2>2. Separación entre Contenido y Diseño</h2>
+            
+            <p>Una de las principales ventajas de CSS es que permite separar el contenido (HTML) del diseño (CSS). Esto significa que puedes tener un archivo HTML limpio con la información, y otro archivo CSS que controle cómo se ve esa información.</p>
+
+            <p>Esta separación hace que el código sea más fácil de leer, mantener y modificar. Por ejemplo, si quieres cambiar el color de todos los títulos, solo necesitas modificar una línea en el archivo CSS en lugar de cambiar cada elemento en HTML.</p>
+
+            <p>Además, facilita el trabajo en equipo: un programador puede encargarse del contenido y otro del diseño sin interferir.</p>
+
+            <h3>Ejemplo Práctico</h3>
+
+            <h4>HTML (index.html):</h4>
+            <pre><code>&lt;h1 class="titulo"&gt;Bienvenido&lt;/h1&gt;</code></pre>
+
+            <h4>CSS (estilos.css):</h4>
+            <pre><code>.titulo {
+  color: green;
+  font-size: 30px;
+}</code></pre>
+
+            <p style="margin-top: 1rem;"><strong>Ventaja:</strong> Si deseas cambiar el color, solo editas el archivo CSS. El HTML permanece intacto.</p>
+
+            <div class="definition">
+                <strong>Concepto Clave</strong>
+                <p>La separación de contenido y diseño permite que múltiples desarrolladores trabajen en paralelo: unos en HTML (estructura) y otros en CSS (estilo), sin conflictos.</p>
+            </div>
+        </section>
+
+        <!-- Sección 3: Selectores -->
+        <section id="selectores">
+            <h2>3. Selectores en CSS</h2>
+            
+            <p>Los selectores son una parte fundamental de CSS, ya que permiten seleccionar los elementos HTML a los que se les aplicará un estilo. Existen varios tipos de selectores, como los de etiqueta, clase, identificador, y combinaciones más avanzadas.</p>
+
+            <p>El selector indica "qué elemento quieres modificar", y luego dentro de llaves {} defines los estilos.</p>
+
+            <h3>Tipos Comunes de Selectores</h3>
+
+            <h4>Selector de Etiqueta</h4>
+            <p>Aplica estilos a todas las instancias de una etiqueta HTML específica.</p>
+            <pre><code>p {
+  color: blue;
+}</code></pre>
+
+            <h4>Selector de Clase</h4>
+            <p>Aplica estilos a elementos que tienen una clase específica. Se identifica con un punto (.).</p>
+            <pre><code>.miClase {
+  font-size: 18px;
+}</code></pre>
+
+            <h4>Selector de ID</h4>
+            <p>Aplica estilos a un elemento único. Se identifica con una almohadilla (#).</p>
+            <pre><code>#miId {
+  background-color: yellow;
+}</code></pre>
+
+            <h3>Ejemplo Completo</h3>
+
+            <h4>CSS:</h4>
+            <pre><code>p {
+  color: blue;
+}
+
+.miClase {
+  font-size: 18px;
+}
+
+#miId {
+  background-color: yellow;
+}</code></pre>
+
+            <h4>HTML:</h4>
+            <pre><code>&lt;p&gt;Texto azul&lt;/p&gt;
+&lt;p class="miClase"&gt;Texto con tamaño grande&lt;/p&gt;
+&lt;p id="miId"&gt;Texto con fondo amarillo&lt;/p&gt;</code></pre>
+
+            <h3>Selectores Avanzados</h3>
+            <ul>
+                <li><strong>Selector descendiente:</strong> <code>div p</code> → selecciona todos los &lt;p&gt; dentro de &lt;div&gt;</li>
+                <li><strong>Selector de atributo:</strong> <code>[type="text"]</code> → selecciona elementos con atributo específico</li>
+                <li><strong>Pseudo-clases:</strong> <code>a:hover</code> → selecciona un elemento en un estado específico</li>
+            </ul>
+        </section>
+
+        <!-- Sección 4: Propiedades y valores -->
+        <section id="propiedades">
+            <h2>4. Propiedades y Valores</h2>
+            
+            <p>En CSS, cada estilo se define mediante una propiedad y un valor. La propiedad indica qué aspecto quieres cambiar (color, tamaño, margen, etc.), y el valor define cómo se verá ese cambio.</p>
+
+            <p>La estructura básica es:</p>
+            <pre><code>propiedad: valor;</code></pre>
+
+            <p>Cada línea termina con punto y coma, y todas las propiedades se agrupan dentro de llaves {}.</p>
+
+            <h3>Ejemplo de Propiedades</h3>
+            <pre><code>h1 {
+  color: red;
+  font-size: 40px;
+  text-align: center;
+  margin: 20px;
+  padding: 10px;
+}</code></pre>
+
+            <h3>Propiedades Comunes</h3>
+
+            <h4>Color y Fondo</h4>
+            <ul>
+                <li><code>color</code> → color del texto</li>
+                <li><code>background-color</code> → color de fondo</li>
+                <li><code>background-image</code> → imagen de fondo</li>
+            </ul>
+
+            <h4>Texto</h4>
+            <ul>
+                <li><code>font-size</code> → tamaño de la fuente</li>
+                <li><code>font-family</code> → tipo de fuente</li>
+                <li><code>text-align</code> → alineación del texto (left, center, right)</li>
+                <li><code>font-weight</code> → grosor del texto (bold, normal)</li>
+            </ul>
+
+            <h4>Espacio</h4>
+            <ul>
+                <li><code>margin</code> → espaciado externo</li>
+                <li><code>padding</code> → espaciado interno</li>
+            </ul>
+
+            <h4>Dimensiones</h4>
+            <ul>
+                <li><code>width</code> → ancho</li>
+                <li><code>height</code> → altura</li>
+            </ul>
+
+            <h4>Bordes</h4>
+            <ul>
+                <li><code>border</code> → borde completo</li>
+                <li><code>border-radius</code> → esquinas redondeadas</li>
+            </ul>
+
+            <div class="definition">
+                <strong>Dato Importante</strong>
+                <p>CSS tiene cientos de propiedades. Estas son solo las más comunes. A medida que practiques, irás aprendiendo más.</p>
+            </div>
+        </section>
+
+        <!-- Sección 5: Cascada y prioridad -->
+        <section id="cascada">
+            <h2>5. Cascada y Prioridad en CSS</h2>
+            
+            <p>CSS significa "hojas de estilo en cascada" porque sigue un sistema de prioridad para decidir qué estilos aplicar cuando hay conflictos.</p>
+
+            <p>Cuando varios estilos afectan a un mismo elemento, CSS utiliza tres reglas principales:</p>
+            <ul>
+                <li><strong>La especificidad</strong> → qué selector es más específico</li>
+                <li><strong>El orden</strong> → el último estilo escrito tiene prioridad</li>
+                <li><strong>La importancia</strong> → uso de <code>!important</code></li>
+            </ul>
+
+            <h3>Ejemplo 1: Orden de Cascada</h3>
+            <pre><code>p {
+  color: blue;
+}
+
+p {
+  color: red;
+}
+
+&lt;p&gt;El texto será rojo&lt;/p&gt;</code></pre>
+
+            <p>El texto será <strong>rojo</strong> porque la segunda regla tiene prioridad.</p>
+
+            <h3>Ejemplo 2: Especificidad</h3>
+            <pre><code>p {
+  color: blue;
+}
+
+#texto {
+  color: green;
+}
+
+&lt;p id="texto"&gt;El texto será verde&lt;/p&gt;</code></pre>
+
+            <p>El color será <strong>verde</strong> porque el ID (#texto) tiene mayor especificidad que la etiqueta (p).</p>
+
+            <h3>Jerarquía de Especificidad</h3>
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Selector</th>
+                        <th>Especificidad</th>
+                        <th>Ejemplo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Etiqueta</td>
+                        <td>Baja</td>
+                        <td><code>p { }</code></td>
+                    </tr>
+                    <tr>
+                        <td>Clase</td>
+                        <td>Media</td>
+                        <td><code>.miClase { }</code></td>
+                    </tr>
+                    <tr>
+                        <td>ID</td>
+                        <td>Alta</td>
+                        <td><code>#miId { }</code></td>
+                    </tr>
+                    <tr>
+                        <td>!important</td>
+                        <td>Crítica</td>
+                        <td><code>color: red !important;</code></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Uso de !important</h3>
+            <p>La palabra clave <code>!important</code> fuerza un estilo a aplicarse, independientemente de la cascada. Sin embargo, debe usarse con cuidado.</p>
+            <pre><code>p {
+  color: blue !important;
+}</code></pre>
+
+            <p><strong>Consejo:</strong> Evita usar <code>!important</code> en exceso, ya que hace el código más difícil de mantener.</p>
+        </section>
+
+        <!-- Sección 6: Diseño responsivo -->
+        <section id="responsivo">
+            <h2>6. Diseño Responsivo (Responsive Design)</h2>
+            
+            <p>El diseño responsivo es una técnica que permite que una página web se adapte a diferentes tamaños de pantalla, como celulares, tablets y computadoras. Hoy en día es fundamental, ya que la mayoría de las personas navegan desde dispositivos móviles.</p>
+
+            <p>CSS hace posible esto mediante el uso de <strong>media queries</strong>, que permiten aplicar estilos dependiendo del tamaño de la pantalla. Así, puedes cambiar el diseño, tamaño de texto o posición de elementos según el dispositivo.</p>
+
+            <p>Esto mejora la experiencia del usuario, ya que evita que tenga que hacer zoom o desplazarse de forma incómoda.</p>
+
+            <h3>Ejemplo 1: Cambio de Color de Fondo</h3>
+            <pre><code>body {
+  background-color: white;
+}
+
+@media (max-width: 600px) {
+  body {
+    background-color: lightgray;
+  }
+}</code></pre>
+
+            <p>En este caso:</p>
+            <ul>
+                <li>En <strong>pantallas grandes</strong> el fondo será blanco</li>
+                <li>En <strong>pantallas pequeñas</strong> (como celulares) será gris claro</li>
+            </ul>
+
+            <h3>Ejemplo 2: Adaptación de Tamaño de Fuente</h3>
+            <pre><code>h1 {
+  font-size: 40px;
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 25px;
+  }
+}</code></pre>
+
+            <p>El tamaño del título se reduce en pantallas pequeñas para mejorar la legibilidad.</p>
+
+            <h3>Puntos de Quiebre Comunes</h3>
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Dispositivo</th>
+                        <th>Ancho de Pantalla</th>
+                        <th>Media Query</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Celular</td>
+                        <td>Hasta 480px</td>
+                        <td><code>@media (max-width: 480px)</code></td>
+                    </tr>
+                    <tr>
+                        <td>Tablet</td>
+                        <td>481px - 768px</td>
+                        <td><code>@media (max-width: 768px)</code></td>
+                    </tr>
+                    <tr>
+                        <td>Desktop</td>
+                        <td>769px+</td>
+                        <td>Estilos por defecto</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Ejemplo Completo de Responsive Design</h3>
+            <pre><code>/* Estilos para pantallas grandes (Desktop) */
+.contenedor {
+  display: flex;
+  gap: 20px;
+}
+
+.sidebar {
+  width: 30%;
+}
+
+.main-content {
+  width: 70%;
+}
+
+/* Adaptación para tablets */
+@media (max-width: 768px) {
+  .contenedor {
+    gap: 15px;
+  }
+
+  .sidebar {
+    width: 25%;
+  }
+
+  .main-content {
+    width: 75%;
+  }
+}
+
+/* Adaptación para celulares */
+@media (max-width: 480px) {
+  .contenedor {
+    display: block;
+  }
+
+  .sidebar,
+  .main-content {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}</code></pre>
+        </section>
+
+        <!-- Sección 7: Tipos de CSS -->
+        <section id="tipos-css">
+            <h2>7. Tipos de CSS (Inline, Interno y Externo)</h2>
+            
+            <p>CSS se puede aplicar de tres formas diferentes en una página web:</p>
+
+            <h3>1. CSS Inline</h3>
+            <p>Se aplica directamente dentro de una etiqueta HTML usando el atributo <code>style</code>.</p>
+            <pre><code>&lt;p style="color: red;"&gt;Texto rojo&lt;/p&gt;</code></pre>
+
+            <h4>Ventajas:</h4>
+            <ul>
+                <li>Rápido para pruebas rápidas</li>
+            </ul>
+
+            <h4>Desventajas:</h4>
+            <ul>
+                <li>Desordenado y difícil de mantener</li>
+                <li>No se puede reutilizar</li>
+                <li>Mezcla HTML con CSS</li>
+            </ul>
+
+            <h3>2. CSS Interno</h3>
+            <p>Se escribe dentro de la etiqueta <code>&lt;style&gt;</code> en el <code>&lt;head&gt;</code> del documento HTML.</p>
+            <pre><code>&lt;head&gt;
+&lt;style&gt;
+p {
+  color: blue;
+}
+&lt;/style&gt;
+&lt;/head&gt;</code></pre>
+
+            <h4>Ventajas:</h4>
+            <ul>
+                <li>Útil para páginas pequeñas</li>
+                <li>Mantiene HTML y CSS separados</li>
+            </ul>
+
+            <h4>Desventajas:</h4>
+            <ul>
+                <li>No se puede reutilizar en otras páginas</li>
+                <li>Aumenta el tamaño del archivo HTML</li>
+            </ul>
+
+            <h3>3. CSS Externo (Recomendado)</h3>
+            <p>Se escribe en un archivo separado <code>.css</code> y se conecta al HTML mediante la etiqueta <code>&lt;link&gt;</code>.</p>
+            <pre><code>&lt;head&gt;
+  &lt;link rel="stylesheet" href="estilos.css"&gt;
+&lt;/head&gt;</code></pre>
+
+            <h4>Ventajas:</h4>
+            <ul>
+                <li>Código más limpio y organizado</li>
+                <li>Fácil mantenimiento</li>
+                <li>Reutilizable en múltiples páginas</li>
+                <li>El navegador cachea el archivo, mejorando el rendimiento</li>
+            </ul>
+
+            <h4>Desventajas:</h4>
+            <ul>
+                <li>Una solicitud HTTP adicional al servidor</li>
+            </ul>
+
+            <div class="definition">
+                <strong>Mejor Práctica</strong>
+                <p>Siempre usa CSS Externo para proyectos profesionales. Es la opción más mantenible, escalable y eficiente.</p>
+            </div>
+
+            <h3>Comparación de los Tres Métodos</h3>
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Tipo</th>
+                        <th>Ubicación</th>
+                        <th>Reutilizable</th>
+                        <th>Recomendado</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Inline</td>
+                        <td>En la etiqueta HTML</td>
+                        <td>No</td>
+                        <td>Solo para pruebas</td>
+                    </tr>
+                    <tr>
+                        <td>Interno</td>
+                        <td>En &lt;style&gt;</td>
+                        <td>No</td>
+                        <td>Páginas simples</td>
+                    </tr>
+                    <tr>
+                        <td>Externo</td>
+                        <td>Archivo .css separado</td>
+                        <td>Sí</td>
+                        <td>✅ Siempre</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Sección 8: Clases e identificadores -->
+        <section id="class-id">
+            <h2>8. Clases e Identificadores (Class vs ID)</h2>
+            
+            <p>En CSS, las clases y los IDs se utilizan para aplicar estilos a elementos específicos. Aunque pueden parecer similares, tienen diferencias importantes.</p>
+
+            <h3>Clases (class)</h3>
+            <ul>
+                <li>Se pueden usar <strong>varias veces</strong> en la misma página</li>
+                <li>Se identifican con un <strong>punto (.)</strong> en CSS</li>
+                <li>Son <strong>reutilizables</strong></li>
+            </ul>
+
+            <h4>Ejemplo:</h4>
+            <pre><code>/* CSS */
+.boton {
+  background-color: blue;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+/* HTML */
+&lt;button class="boton"&gt;Aceptar&lt;/button&gt;
+&lt;button class="boton"&gt;Enviar&lt;/button&gt;
+&lt;button class="boton"&gt;Cancelar&lt;/button&gt;</code></pre>
+
+            <h3>IDs (id)</h3>
+            <ul>
+                <li>Solo se usan <strong>una vez</strong> por página</li>
+                <li>Se identifican con una <strong>almohadilla (#)</strong> en CSS</li>
+                <li>Son <strong>únicos</strong></li>
+            </ul>
+
+            <h4>Ejemplo:</h4>
+            <pre><code>/* CSS */
+#titulo {
+  color: red;
+  font-size: 32px;
+}
+
+#encabezado {
+  background-color: navy;
+  padding: 20px;
+}
+
+/* HTML */
+&lt;h1 id="titulo"&gt;Mi título&lt;/h1&gt;
+&lt;div id="encabezado"&gt;...&lt;/div&gt;</code></pre>
+
+            <h3>Comparación: Class vs ID</h3>
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Característica</th>
+                        <th>Class</th>
+                        <th>ID</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Símbolo en CSS</td>
+                        <td>. (punto)</td>
+                        <td># (almohadilla)</td>
+                    </tr>
+                    <tr>
+                        <td>Frecuencia de uso</td>
+                        <td>Múltiples veces</td>
+                        <td>Una sola vez</td>
+                    </tr>
+                    <tr>
+                        <td>Especificidad</td>
+                        <td>Media</td>
+                        <td>Alta</td>
+                    </tr>
+                    <tr>
+                        <td>Caso de uso</td>
+                        <td>Estilos reutilizables</td>
+                        <td>Elementos únicos</td>
+                    </tr>
+                    <tr>
+                        <td>Ejemplo</td>
+                        <td><code>.boton</code></td>
+                        <td><code>#navegacion</code></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Diferencia Clave</h3>
+            <div class="definition">
+                <strong>Regla de Oro</strong>
+                <p><code>class</code> → reutilizable (múltiples elementos con el mismo estilo)<br><code>id</code> → único (un solo elemento especial)</p>
+            </div>
+
+            <h3>Ejemplo Práctico Combinado</h3>
+            <pre><code>/* CSS */
+.tarjeta {
+  border: 1px solid gray;
+  padding: 15px;
+  margin: 10px;
+}
+
+#contenido-principal {
+  width: 70%;
+  float: left;
+}
+
+.destacado {
+  background-color: yellow;
+}
+
+/* HTML */
+&lt;div id="contenido-principal"&gt;
+  &lt;div class="tarjeta"&gt;Tarjeta 1&lt;/div&gt;
+  &lt;div class="tarjeta destacado"&gt;Tarjeta 2 (destacada)&lt;/div&gt;
+  &lt;div class="tarjeta"&gt;Tarjeta 3&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+        </section>
+
+        <!-- Sección 9: Box Model -->
+        <section id="box-model">
+            <h2>9. Modelo de Caja (Box Model)</h2>
+            
+            <p>El modelo de caja es uno de los conceptos más importantes de CSS. Todos los elementos HTML se representan como una caja rectangular compuesta por cuatro capas:</p>
+
+            <h3>Las Cuatro Capas del Box Model</h3>
+            <ul>
+                <li><strong>Contenido (Content)</strong> → lo que se muestra (texto, imagen, etc.)</li>
+                <li><strong>Relleno (Padding)</strong> → espacio interno entre el contenido y el borde</li>
+                <li><strong>Borde (Border)</strong> → línea alrededor del elemento</li>
+                <li><strong>Margen (Margin)</strong> → espacio externo alrededor del borde</li>
+            </ul>
+
+            <h3>Visualización del Box Model</h3>
+            <div class="box-model-diagram">
+┌─────────────────────────────┐<br>
+│       MARGIN                │<br>
+│  ┌─────────────────────────┐│<br>
+│  │   BORDER                ││<br>
+│  │  ┌───────────────────┐  ││<br>
+│  │  │   PADDING         │  ││<br>
+│  │  │  ┌─────────────┐  │  ││<br>
+│  │  │  │  CONTENT    │  │  ││<br>
+│  │  │  └─────────────┘  │  ││<br>
+│  │  └───────────────────┘  ││<br>
+│  └─────────────────────────┘│<br>
+└─────────────────────────────┘
+            </div>
+
+            <h3>Ejemplo Práctico</h3>
+            <pre><code>div {
+  width: 200px;
+  padding: 20px;
+  border: 5px solid black;
+  margin: 30px;
+}</code></pre>
+
+            <p>Esto significa:</p>
+            <ul>
+                <li>El <strong>contenido</strong> mide 200px de ancho</li>
+                <li>Tiene <strong>espacio interno</strong> (padding) de 20px en todos los lados</li>
+                <li>Un <strong>borde</strong> sólido negro de 5px</li>
+                <li>Y <strong>separación externa</strong> (margin) de 30px en todos los lados</li>
+            </ul>
+
+            <h3>Propiedades del Box Model</h3>
+
+            <h4>Width y Height</h4>
+            <pre><code>div {
+  width: 300px;
+  height: 200px;
+}</code></pre>
+
+            <h4>Padding (Relleno Interno)</h4>
+            <pre><code>/* Todos los lados */
+div {
+  padding: 20px;
+}
+
+/* Lados específicos */
+div {
+  padding-top: 10px;
+  padding-right: 20px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+}
+
+/* Sintaxis abreviada */
+div {
+  padding: 10px 20px; /* arriba/abajo, izquierda/derecha */
+}</code></pre>
+
+            <h4>Border (Borde)</h4>
+            <pre><code>/* Borde completo */
+div {
+  border: 2px solid blue;
+}
+
+/* Bordes específicos */
+div {
+  border-top: 1px solid red;
+  border-right: 1px solid green;
+  border-bottom: 1px solid blue;
+  border-left: 1px solid yellow;
+}
+
+/* Esquinas redondeadas */
+div {
+  border-radius: 10px;
+}</code></pre>
+
+            <h4>Margin (Margen Externo)</h4>
+            <pre><code>/* Todos los lados */
+div {
+  margin: 20px;
+}
+
+/* Lados específicos */
+div {
+  margin-top: 10px;
+  margin-right: 20px;
+  margin-bottom: 10px;
+  margin-left: 20px;
+}
+
+/* Centrar horizontalmente */
+div {
+  margin: 0 auto;
+}</code></pre>
+
+            <h3>box-sizing</h3>
+            <p>De forma predeterminada, el ancho y alto no incluyen padding ni border. Para cambiar esto, usa <code>box-sizing</code>:</p>
+            <pre><code>/* Por defecto */
+div {
+  box-sizing: content-box; /* width = contenido */
+}
+
+/* Recomendado */
+div {
+  box-sizing: border-box; /* width = contenido + padding + border */
+}</code></pre>
+
+            <div class="definition">
+                <strong>Consejo Profesional</strong>
+                <p>Añade <code>box-sizing: border-box;</code> a todos los elementos al inicio de tu CSS. Esto hace que sea mucho más fácil calcular dimensiones:</p>
+                <pre><code>* {
+  box-sizing: border-box;
+}</code></pre>
+            </div>
+
+            <h3>Ejemplo Completo</h3>
+            <pre><code>.tarjeta {
+  width: 300px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  margin: 20px auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.tarjeta h2 {
+  margin-top: 0;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #667eea;
+}</code></pre>
+        </section>
+
+        <!-- Sección 10: Animaciones -->
+        <section id="animaciones">
+            <h2>10. Animaciones y Efectos en CSS</h2>
+            
+            <p>CSS permite crear animaciones y efectos visuales sin necesidad de JavaScript. Esto hace que las páginas sean más dinámicas e interactivas, mejorando la experiencia del usuario.</p>
+
+            <p>Existen dos formas principales de crear animaciones en CSS:</p>
+
+            <h3>1. Transiciones (Transitions)</h3>
+            <p>Permiten cambiar suavemente un valor cuando ocurre un evento (como pasar el mouse o hacer clic).</p>
+
+            <h4>Sintaxis Básica</h4>
+            <pre><code>elemento {
+  transition: propiedad duración velocidad retraso;
+}</code></pre>
+
+            <h4>Ejemplo: Cambio de Color al Pasar el Mouse</h4>
+            <pre><code>button {
+  background-color: blue;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.5s ease;
+}
+
+button:hover {
+  background-color: red;
+}</code></pre>
+
+            <p>Cuando el usuario pasa el mouse sobre el botón, el color cambia suavemente de azul a rojo en 0.5 segundos.</p>
+
+            <h4>Propiedades de Transición</h4>
+            <ul>
+                <li><code>transition-property</code> → qué propiedad animar (ej. color, width, opacity)</li>
+                <li><code>transition-duration</code> → duración en segundos (ej. 0.5s)</li>
+                <li><code>transition-timing-function</code> → velocidad (ease, linear, ease-in, ease-out)</li>
+                <li><code>transition-delay</code> → retraso antes de comenzar (ej. 0.2s)</li>
+            </ul>
+
+            <h4>Ejemplo Completo</h4>
+            <pre><code>.caja {
+  width: 100px;
+  height: 100px;
+  background-color: blue;
+  transition-property: width, background-color;
+  transition-duration: 0.3s, 0.5s;
+  transition-timing-function: ease-in-out;
+}
+
+.caja:hover {
+  width: 200px;
+  background-color: green;
+}</code></pre>
+
+            <h3>2. Animaciones con @keyframes</h3>
+            <p>Permiten crear animaciones más complejas y personalizadas que se ejecutan automáticamente.</p>
+
+            <h4>Sintaxis Básica</h4>
+            <pre><code>@keyframes nombreAnimacion {
+  from {
+    /* estilos iniciales */
+  }
+  to {
+    /* estilos finales */
+  }
+}
+
+elemento {
+  animation: nombreAnimacion duracion iteraciones;
+}</code></pre>
+
+            <h4>Ejemplo: Movimiento Horizontal</h4>
+            <pre><code>@keyframes mover {
+  from {
+    transform: translateX(0px);
+  }
+  to {
+    transform: translateX(100px);
+  }
+}
+
+div {
+  animation: mover 2s infinite;
+}</code></pre>
+
+            <p>Esto mueve un elemento de izquierda a derecha continuamente, cada 2 segundos.</p>
+
+            <h4>Ejemplo: Desvanecimiento (Fade In/Out)</h4>
+            <pre><code>@keyframes desvanecer {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.elemento {
+  animation: desvanecer 3s infinite;
+}</code></pre>
+
+            <h4>Propiedades de Animación</h4>
+            <ul>
+                <li><code>animation-name</code> → nombre de la animación</li>
+                <li><code>animation-duration</code> → duración en segundos</li>
+                <li><code>animation-timing-function</code> → velocidad (ease, linear, etc.)</li>
+                <li><code>animation-delay</code> → retraso inicial</li>
+                <li><code>animation-iteration-count</code> → cuántas veces se repite (ej. infinite, 3)</li>
+                <li><code>animation-direction</code> → dirección (normal, reverse, alternate)</li>
+            </ul>
+
+            <h3>Ejemplo Completo: Animación Compleja</h3>
+            <pre><code>@keyframes rotarYCrecer {
+  0% {
+    transform: rotate(0deg) scale(1);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(360deg) scale(1.5);
+    opacity: 0;
+  }
+}
+
+.bola {
+  width: 50px;
+  height: 50px;
+  background-color: #667eea;
+  border-radius: 50%;
+  animation: rotarYCrecer 2s ease-in-out infinite;
+}</code></pre>
+
+            <h3>Diferencias: Transiciones vs Animaciones</h3>
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Aspecto</th>
+                        <th>Transiciones</th>
+                        <th>Animaciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Inicio</td>
+                        <td>Necesita un evento (hover, clic)</td>
+                        <td>Se ejecuta automáticamente</td>
+                    </tr>
+                    <tr>
+                        <td>Complejidad</td>
+                        <td>Simples (de un estado a otro)</td>
+                        <td>Complejas (múltiples estados)</td>
+                    </tr>
+                    <tr>
+                        <td>Control</td>
+                        <td>Menos control</td>
+                        <td>Más control con @keyframes</td>
+                    </tr>
+                    <tr>
+                        <td>Uso de código</td>
+                        <td><code>transition</code></td>
+                        <td><code>@keyframes</code> + <code>animation</code></td>
+                    </tr>
+                    <tr>
+                        <td>Ejemplo</td>
+                        <td>Botón que cambia color al pasar mouse</td>
+                        <td>Carga infinita</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Transformaciones (Transform)</h3>
+            <p>Las transformaciones son propiedades CSS que permiten modificar elementos antes de ser renderizados:</p>
+            <pre><code>/* Trasladar */
+transform: translateX(50px);
+transform: translateY(100px);
+
+/* Rotar */
+transform: rotate(45deg);
+
+/* Escalar */
+transform: scale(2);
+transform: scaleX(1.5);
+
+/* Sesgar */
+transform: skew(10deg);
+
+/* Combinaciones */
+transform: translateX(50px) rotate(45deg) scale(1.5);</code></pre>
+
+            <div class="definition">
+                <strong>Rendimiento</strong>
+                <p>Las transiciones y animaciones de CSS son más eficientes que hacer cambios con JavaScript, ya que se ejecutan en el hilo de composición del navegador.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Guía Completa de CSS. Todos los derechos reservados.</p>
+        <p>Autor: Recursos Educativos</p>
+        <p>Última actualización: Marzo 2026</p>
+    </footer>
+</body>
+</html>

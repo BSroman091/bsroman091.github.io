@@ -1,0 +1,1120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8428793459037062"
+     crossorigin="anonymous"></script>
+<meta name="google-adsense-account" content="ca-pub-8428793459037062">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guía Completa de Java - Lenguaje de Programación Orientado a Objetos</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2rem 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        header h1 {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            font-size: 2.5rem;
+        }
+
+        nav {
+            background-color: #333;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav ul {
+            list-style: none;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+            font-size: 0.9rem;
+        }
+
+        nav a:hover {
+            background-color: #667eea;
+        }
+
+        main {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 20px;
+        }
+
+        section {
+            background: white;
+            margin-bottom: 2rem;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        section h2 {
+            color: #667eea;
+            margin-bottom: 1rem;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 0.5rem;
+        }
+
+        section h3 {
+            color: #764ba2;
+            margin-top: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        section h4 {
+            color: #764ba2;
+            margin-top: 1rem;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .definition {
+            background-color: #f0f4ff;
+            border-left: 4px solid #667eea;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 4px;
+        }
+
+        .definition strong {
+            color: #667eea;
+        }
+
+        pre {
+            background-color: #282c34;
+            color: #abb2bf;
+            padding: 1.5rem;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin: 1rem 0;
+            font-family: 'Courier New', monospace;
+            line-height: 1.5;
+        }
+
+        code {
+            font-family: 'Courier New', monospace;
+            background-color: #f0f0f0;
+            padding: 0.2rem 0.4rem;
+            border-radius: 3px;
+            color: #d63384;
+        }
+
+        pre code {
+            background-color: transparent;
+            color: #abb2bf;
+            padding: 0;
+        }
+
+        ul, ol {
+            margin-left: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        .example-box {
+            background-color: #fffbea;
+            border: 1px solid #ffd700;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 4px;
+        }
+
+        .example-box strong {
+            color: #ff6b00;
+        }
+
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+        }
+
+        .comparison-table th,
+        .comparison-table td {
+            border: 1px solid #ddd;
+            padding: 0.75rem;
+            text-align: left;
+        }
+
+        .comparison-table th {
+            background-color: #667eea;
+            color: white;
+        }
+
+        .comparison-table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        .tipo-dato {
+            background-color: #e8f4f8;
+            border-left: 4px solid #667eea;
+            padding: 1rem;
+            margin: 0.5rem 0;
+            border-radius: 4px;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+
+        footer p {
+            margin: 0.5rem 0;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8rem;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+
+            nav a {
+                font-size: 0.85rem;
+                padding: 0.4rem 0.8rem;
+            }
+
+            main {
+                padding: 0 15px;
+            }
+
+            section {
+                padding: 1.5rem;
+            }
+
+            .comparison-table {
+                font-size: 0.9rem;
+            }
+
+            .comparison-table th,
+            .comparison-table td {
+                padding: 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+ <nav>
+        <a href="index.html">Inicio</a> |
+        <a href="html.html">HTML</a> |
+        <a href="css.html">CSS</a> |
+        <a href="java.html">Java</a> |
+        <a href="python.html">Python</a> |
+        <a href="privacidad.html">privacidad</a>
+    </nav>
+    <header>
+        <h1>☕ Guía Completa de Java</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#que-es-java">¿Qué es Java?</a></li>
+            <li><a href="#sintaxis">Sintaxis Estructurada</a></li>
+            <li><a href="#variables">Variables</a></li>
+            <li><a href="#control">Estructuras Control</a></li>
+            <li><a href="#metodos">Métodos</a></li>
+            <li><a href="#poo">Programación OOP</a></li>
+            <li><a href="#excepciones">Excepciones</a></li>
+            <li><a href="#librerias">Librerías</a></li>
+            <li><a href="#portabilidad">Portabilidad</a></li>
+            <li><a href="#vida-real">Vida Real</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <!-- Sección 1: ¿Qué es Java? -->
+        <section id="que-es-java">
+            <h2>1. ¿Qué es Java?</h2>
+            
+            <p>Java es un lenguaje de programación de alto nivel, orientado a objetos y ampliamente utilizado en el desarrollo de software moderno. Fue creado por James Gosling en 1995 con el objetivo de diseñar un lenguaje que fuera portátil, seguro y fácil de usar en diferentes plataformas. Desde entonces, Java se ha convertido en uno de los lenguajes más importantes del mundo, especialmente en entornos empresariales.</p>
+
+            <p>Una de sus características más destacadas es su capacidad de ejecutarse en múltiples sistemas operativos sin necesidad de modificar el código. Esto es posible gracias a la <strong>Máquina Virtual de Java (JVM)</strong>, que interpreta el código compilado y lo adapta al sistema donde se ejecuta. Este enfoque permite que un programa desarrollado en Windows pueda ejecutarse en Linux o Mac sin cambios.</p>
+
+            <p>Java se utiliza en una gran variedad de aplicaciones, incluyendo desarrollo de aplicaciones móviles (especialmente Android), sistemas bancarios, plataformas web, software empresarial y aplicaciones científicas. Su estabilidad y seguridad lo hacen ideal para proyectos grandes y complejos.</p>
+
+            <p>Además, Java cuenta con una enorme comunidad de desarrolladores y una gran cantidad de documentación, lo que facilita el aprendizaje y la resolución de problemas.</p>
+
+            <h3>Hola Mundo en Java</h3>
+            <pre><code>public class Main {
+    public static void main(String[] args) {
+        System.out.println("Hola mundo");
+    }
+}</code></pre>
+
+            <h3>Características Principales de Java</h3>
+            <ul>
+                <li><strong>Orientado a Objetos:</strong> Todo se basa en clases y objetos</li>
+                <li><strong>Portátil:</strong> Funciona en cualquier plataforma con JVM</li>
+                <li><strong>Seguro:</strong> Manejo de errores y gestión de memoria</li>
+                <li><strong>Compilado e Interpretado:</strong> Se compila a bytecode y se interpreta en JVM</li>
+                <li><strong>Robusto:</strong> Ideal para aplicaciones grandes y críticas</li>
+            </ul>
+
+            <h3>Componentes Principales</h3>
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Componente</th>
+                        <th>Descripción</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>JDK (Java Development Kit)</td>
+                        <td>Herramientas para desarrollar aplicaciones Java</td>
+                    </tr>
+                    <tr>
+                        <td>JRE (Java Runtime Environment)</td>
+                        <td>Entorno necesario para ejecutar aplicaciones Java</td>
+                    </tr>
+                    <tr>
+                        <td>JVM (Java Virtual Machine)</td>
+                        <td>Máquina virtual que ejecuta el bytecode</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="definition">
+                <strong>Dato Histórico</strong>
+                <p>Java fue creado originalmente para dispositivos televisivos, pero resultó ser mucho más versátil. Su lema "Write Once, Run Anywhere" (WORA) refleja su capacidad de portabilidad.</p>
+            </div>
+        </section>
+
+        <!-- Sección 2: Sintaxis Estructurada -->
+        <section id="sintaxis">
+            <h2>2. Sintaxis Estructurada y Uso de Clases</h2>
+            
+            <p>Java tiene una sintaxis más estructurada y estricta en comparación con otros lenguajes como Python. <strong>Todo el código en Java debe estar contenido dentro de clases</strong>, lo que refleja su enfoque orientado a objetos desde el inicio.</p>
+
+            <p>Cada programa en Java comienza con una <strong>clase principal</strong> que contiene el método <code>main</code>, el cual es el punto de entrada del programa. Este método es donde se ejecutan las instrucciones iniciales. La sintaxis incluye el uso de llaves {} para definir bloques de código y punto y coma ; para terminar instrucciones.</p>
+
+            <p>Aunque esta estructura puede parecer más compleja al principio, ayuda a mantener el código organizado y reduce errores en programas grandes. También fomenta buenas prácticas desde el inicio del aprendizaje.</p>
+
+            <h3>Estructura Básica</h3>
+            <pre><code>public class Saludo {
+    public static void main(String[] args) {
+        System.out.println("Bienvenido a Java");
+    }
+}</code></pre>
+
+            <h3>Análisis de la Estructura</h3>
+            <ul>
+                <li><code>public class Saludo</code> → define la clase pública llamada "Saludo"</li>
+                <li><code>public static void main(String[] args)</code> → método principal donde comienza la ejecución</li>
+                <li><code>System.out.println()</code> → imprime un mensaje en pantalla</li>
+                <li>Las llaves <code>{}</code> delimitan los bloques de código</li>
+                <li>Los puntos y comas <code>;</code> terminan cada instrucción</li>
+            </ul>
+
+            <h3>Comparación con Python</h3>
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Aspecto</th>
+                        <th>Java</th>
+                        <th>Python</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Estructura</td>
+                        <td>Obligatoriamente en clases</td>
+                        <td>Flexible, puede ser procedural</td>
+                    </tr>
+                    <tr>
+                        <td>Delimitadores de bloque</td>
+                        <td>Llaves { }</td>
+                        <td>Indentación</td>
+                    </tr>
+                    <tr>
+                        <td>Terminador de instrucción</td>
+                        <td>Punto y coma ;</td>
+                        <td>Salto de línea</td>
+                    </tr>
+                    <tr>
+                        <td>Compilación</td>
+                        <td>Compilado a bytecode</td>
+                        <td>Interpretado</td>
+                    </tr>
+                    <tr>
+                        <td>Complejidad inicial</td>
+                        <td>Mayor</td>
+                        <td>Menor</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="definition">
+                <strong>Concepto Clave: public static void main()</strong>
+                <p><code>public</code> = accesible desde cualquier lugar<br><code>static</code> = no necesita instancia<br><code>void</code> = no retorna valor<br><code>main</code> = punto de entrada</p>
+            </div>
+        </section>
+
+        <!-- Sección 3: Variables y Tipos de Datos -->
+        <section id="variables">
+            <h2>3. Variables y Tipos de Datos</h2>
+            
+            <p>En Java, las variables se utilizan para almacenar información que puede cambiar durante la ejecución del programa. A diferencia de lenguajes dinámicos, Java requiere que cada variable tenga un <strong>tipo de dato definido desde el inicio</strong>, lo que se conoce como <strong>tipado estático</strong>.</p>
+
+            <p>Esto significa que antes de usar una variable, debes especificar si será un número, texto, carácter, etc. Este enfoque ayuda a prevenir errores y hace que el código sea más seguro y predecible.</p>
+
+            <h3>Tipos de Datos Primitivos</h3>
+
+            <div class="tipo-dato">
+                <strong>int (Enteros):</strong> Números sin decimales (-2,147,483,648 a 2,147,483,647)
+                <pre><code>int edad = 20;
+int cantidad = 100;</code></pre>
+            </div>
+
+            <div class="tipo-dato">
+                <strong>double (Decimales):</strong> Números con decimales de precisión
+                <pre><code>double altura = 1.75;
+double precio = 19.99;</code></pre>
+            </div>
+
+            <div class="tipo-dato">
+                <strong>char (Carácter):</strong> Un único carácter
+                <pre><code>char letra = 'A';
+char digito = '5';</code></pre>
+            </div>
+
+            <div class="tipo-dato">
+                <strong>boolean (Booleano):</strong> Verdadero o falso
+                <pre><code>boolean activo = true;
+boolean disponible = false;</code></pre>
+            </div>
+
+            <div class="tipo-dato">
+                <strong>String (Texto):</strong> Cadena de caracteres
+                <pre><code>String nombre = "Luis";
+String ciudad = "Madrid";</code></pre>
+            </div>
+
+            <h3>Ejemplo Completo</h3>
+            <pre><code>public class Variables {
+    public static void main(String[] args) {
+        int edad = 20;
+        double altura = 1.75;
+        String nombre = "Luis";
+        boolean activo = true;
+
+        System.out.println(nombre + " tiene " + edad + " años");
+        System.out.println("Altura: " + altura + " metros");
+        System.out.println("Activo: " + activo);
+    }
+}</code></pre>
+
+            <h3>Operaciones Básicas</h3>
+            <pre><code>int a = 10;
+int b = 3;
+
+int suma = a + b;          // 13
+int resta = a - b;         // 7
+int multiplicacion = a * b; // 30
+int division = a / b;      // 3
+int modulo = a % b;        // 1
+int potencia = a;          // No existe operador directo</code></pre>
+
+            <h3>Conversión de Tipos</h3>
+            <pre><code>// Conversión automática
+int numero = 10;
+double decimal = numero;   // Conversión implícita
+
+// Conversión forzada
+double decimal2 = 10.5;
+int numero2 = (int) decimal2;  // Conversión explícita (casting)</code></pre>
+
+            <div class="definition">
+                <strong>Tipado Estático vs Dinámico</strong>
+                <p>En Java (tipado estático) debes especificar el tipo: <code>int numero = 5;</code><br>En Python (tipado dinámico) no lo necesitas: <code>numero = 5</code></p>
+            </div>
+        </section>
+
+        <!-- Sección 4: Estructuras de Control -->
+        <section id="control">
+            <h2>4. Estructuras de Control</h2>
+            
+            <p>Las estructuras de control permiten dirigir el flujo de un programa, tomando decisiones o repitiendo acciones. Son fundamentales para crear programas interactivos y funcionales.</p>
+
+            <h3>Condicionales (if-else)</h3>
+            <p>Las estructuras condicionales permiten ejecutar diferentes bloques de código dependiendo de una condición.</p>
+
+            <h4>Ejemplo Básico</h4>
+            <pre><code>int numero = 3;
+
+if (numero % 2 == 0) {
+    System.out.println("Es par");
+} else {
+    System.out.println("Es impar");
+}</code></pre>
+
+            <h4>Ejemplo con else if</h4>
+            <pre><code>int edad = 15;
+
+if (edad >= 18) {
+    System.out.println("Mayor de edad");
+} else if (edad >= 13) {
+    System.out.println("Adolescente");
+} else {
+    System.out.println("Niño");
+}</code></pre>
+
+            <h3>Switch</h3>
+            <p>Para múltiples opciones basadas en un valor específico:</p>
+            <pre><code>int dia = 3;
+
+switch (dia) {
+    case 1:
+        System.out.println("Lunes");
+        break;
+    case 2:
+        System.out.println("Martes");
+        break;
+    case 3:
+        System.out.println("Miércoles");
+        break;
+    default:
+        System.out.println("Otro día");
+}</code></pre>
+
+            <h3>Bucle for</h3>
+            <pre><code>for (int i = 1; i <= 5; i++) {
+    System.out.println("Número: " + i);
+}</code></pre>
+
+            <h3>Bucle while</h3>
+            <pre><code>int contador = 1;
+
+while (contador <= 5) {
+    System.out.println("Contador: " + contador);
+    contador++;
+}</code></pre>
+
+            <h3>Bucle do-while</h3>
+            <p>Se ejecuta al menos una vez, luego verifica la condición:</p>
+            <pre><code>int contador = 1;
+
+do {
+    System.out.println("Contador: " + contador);
+    contador++;
+} while (contador <= 5);</code></pre>
+
+            <h3>Operadores de Comparación</h3>
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Operador</th>
+                        <th>Significado</th>
+                        <th>Ejemplo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>==</td>
+                        <td>Igual</td>
+                        <td><code>x == 5</code></td>
+                    </tr>
+                    <tr>
+                        <td>!=</td>
+                        <td>No igual</td>
+                        <td><code>x != 5</code></td>
+                    </tr>
+                    <tr>
+                        <td>&gt;</td>
+                        <td>Mayor</td>
+                        <td><code>x > 5</code></td>
+                    </tr>
+                    <tr>
+                        <td>&lt;</td>
+                        <td>Menor</td>
+                        <td><code>x < 5</code></td>
+                    </tr>
+                    <tr>
+                        <td>&gt;=</td>
+                        <td>Mayor o igual</td>
+                        <td><code>x >= 5</code></td>
+                    </tr>
+                    <tr>
+                        <td>&lt;=</td>
+                        <td>Menor o igual</td>
+                        <td><code>x <= 5</code></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Sección 5: Métodos -->
+        <section id="metodos">
+            <h2>5. Métodos (Funciones)</h2>
+            
+            <p>En Java, los <strong>métodos</strong> son bloques de código que realizan una tarea específica y pueden ser reutilizados varias veces dentro de un programa. Esto ayuda a evitar la repetición de código y facilita la organización.</p>
+
+            <p>Cada método tiene un <strong>tipo de retorno</strong> (el tipo de dato que devuelve), un <strong>nombre</strong> y opcionalmente <strong>parámetros</strong>. Si no devuelve nada, se usa <code>void</code>.</p>
+
+            <h3>Estructura de un Método</h3>
+            <pre><code>[modificador] [tipo_retorno] nombreMetodo([parámetros]) {
+    // Cuerpo del método
+    return valor;
+}</code></pre>
+
+            <h3>Método que Multiplica</h3>
+            <pre><code>public class Operaciones {
+
+    public static int multiplicar(int a, int b) {
+        return a * b;
+    }
+
+    public static void main(String[] args) {
+        int resultado = multiplicar(4, 5);
+        System.out.println("Resultado: " + resultado);  // 20
+    }
+}</code></pre>
+
+            <h3>Métodos sin Retorno (void)</h3>
+            <pre><code>public class Saludos {
+
+    public static void saludar(String nombre) {
+        System.out.println("Hola, " + nombre);
+    }
+
+    public static void main(String[] args) {
+        saludar("María");   // Hola, María
+        saludar("Juan");    // Hola, Juan
+    }
+}</code></pre>
+
+            <h3>Método que Devuelve Múltiples Cálculos</h3>
+            <pre><code>public static double calcularPromedio(double a, double b, double c) {
+    return (a + b + c) / 3;
+}
+
+public static void main(String[] args) {
+    double promedio = calcularPromedio(8.5, 9.0, 7.5);
+    System.out.println("Promedio: " + promedio);
+}</code></pre>
+
+            <h3>Sobrecarga de Métodos</h3>
+            <p>Java permite tener múltiples métodos con el mismo nombre pero diferentes parámetros:</p>
+            <pre><code>public static int sumar(int a, int b) {
+    return a + b;
+}
+
+public static double sumar(double a, double b) {
+    return a + b;
+}
+
+// El compilador elige automáticamente el método correcto
+System.out.println(sumar(5, 3));        // int
+System.out.println(sumar(5.5, 3.2));    // double</code></pre>
+
+            <div class="definition">
+                <strong>Ventajas de los Métodos</strong>
+                <ul>
+                    <li>Evitan repetición de código</li>
+                    <li>Hacen el código más organizado</li>
+                    <li>Facilitan el mantenimiento</li>
+                    <li>Mejoran la legibilidad</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Sección 6: POO -->
+        <section id="poo">
+            <h2>6. Programación Orientada a Objetos (POO)</h2>
+            
+            <p>Java es un lenguaje <strong>completamente orientado a objetos</strong>, lo que significa que todo se basa en clases y objetos. Este enfoque permite organizar mejor el código y representar elementos del mundo real.</p>
+
+            <h3>Conceptos Principales de POO</h3>
+            <ul>
+                <li><strong>Encapsulamiento:</strong> Proteger los datos dentro de clases</li>
+                <li><strong>Herencia:</strong> Reutilizar código mediante jerarquía de clases</li>
+                <li><strong>Polimorfismo:</strong> Usar métodos de diferentes formas</li>
+                <li><strong>Abstracción:</strong> Simplificar sistemas complejos</li>
+            </ul>
+
+            <h3>Definición de una Clase</h3>
+            <pre><code>public class Persona {
+    // Atributos
+    private String nombre;
+    private int edad;
+    
+    // Método constructor
+    public Persona(String nombre, int edad) {
+        this.nombre = nombre;
+        this.edad = edad;
+    }
+    
+    // Métodos
+    public void presentarse() {
+        System.out.println("Me llamo " + nombre);
+        System.out.println("Tengo " + edad + " años");
+    }
+}</code></pre>
+
+            <h3>Uso de la Clase</h3>
+            <pre><code>public class Main {
+    public static void main(String[] args) {
+        Persona p1 = new Persona("Ana", 25);
+        p1.presentarse();
+    }
+}</code></pre>
+
+            <h3>Herencia</h3>
+            <pre><code>class Animal {
+    public void hacerSonido() {
+        System.out.println("Sonido genérico");
+    }
+}
+
+class Perro extends Animal {
+    @Override
+    public void hacerSonido() {
+        System.out.println("¡Guau!");
+    }
+}
+
+class Gato extends Animal {
+    @Override
+    public void hacerSonido() {
+        System.out.println("¡Miau!");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Perro perro = new Perro();
+        Gato gato = new Gato();
+        
+        perro.hacerSonido();  // ¡Guau!
+        gato.hacerSonido();   // ¡Miau!
+    }
+}</code></pre>
+
+            <h3>Encapsulamiento con getters y setters</h3>
+            <pre><code>public class CuentaBancaria {
+    private double saldo;
+    
+    public CuentaBancaria(double saldoInicial) {
+        this.saldo = saldoInicial;
+    }
+    
+    // Getter
+    public double getSaldo() {
+        return saldo;
+    }
+    
+    // Setter con validación
+    public void setSaldo(double nuevoSaldo) {
+        if (nuevoSaldo >= 0) {
+            this.saldo = nuevoSaldo;
+        }
+    }
+}</code></pre>
+
+            <div class="definition">
+                <strong>La Importancia de POO</strong>
+                <p>POO permite modelar el mundo real en código. Por ejemplo, una clase "Estudiante" puede tener atributos como nombre, edad, calificaciones y métodos como estudiar() o presentarExamen().</p>
+            </div>
+        </section>
+
+        <!-- Sección 7: Excepciones -->
+        <section id="excepciones">
+            <h2>7. Manejo de Errores (Excepciones)</h2>
+            
+            <p>En Java, los errores se manejan mediante un sistema llamado <strong>excepciones</strong>. Esto permite controlar fallos sin que el programa se detenga inesperadamente.</p>
+
+            <p>Se utilizan bloques <code>try-catch</code> para capturar errores y manejarlos adecuadamente. También existe <code>finally</code>, que se ejecuta siempre, independientemente de si ocurre una excepción.</p>
+
+            <h3>Estructura Básica</h3>
+            <pre><code>try {
+    // Código que puede generar excepción
+    int resultado = 10 / 0;
+} catch (ArithmeticException e) {
+    System.out.println("No se puede dividir entre cero");
+}</code></pre>
+
+            <h3>Manejo de Múltiples Excepciones</h3>
+            <pre><code>try {
+    int[] numeros = {1, 2, 3};
+    System.out.println(numeros[5]);  // Índice fuera de rango
+} catch (ArrayIndexOutOfBoundsException e) {
+    System.out.println("Índice no válido");
+} catch (Exception e) {
+    System.out.println("Error general");
+}</code></pre>
+
+            <h3>Bloque finally</h3>
+            <p>El bloque <code>finally</code> siempre se ejecuta, ocurra o no una excepción:</p>
+            <pre><code>try {
+    int resultado = 10 / 2;
+    System.out.println("Resultado: " + resultado);
+} catch (ArithmeticException e) {
+    System.out.println("Error");
+} finally {
+    System.out.println("Operación finalizada");
+}</code></pre>
+
+            <h3>Excepciones Comunes</h3>
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Excepción</th>
+                        <th>Causa</th>
+                        <th>Ejemplo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>ArithmeticException</td>
+                        <td>Error matemático</td>
+                        <td>División entre cero</td>
+                    </tr>
+                    <tr>
+                        <td>ArrayIndexOutOfBoundsException</td>
+                        <td>Índice inválido</td>
+                        <td>array[100] en array de 10 elementos</td>
+                    </tr>
+                    <tr>
+                        <td>NullPointerException</td>
+                        <td>Referencia nula</td>
+                        <td>Acceder a método en objeto null</td>
+                    </tr>
+                    <tr>
+                        <td>NumberFormatException</td>
+                        <td>Formato de número inválido</td>
+                        <td>Integer.parseInt("abc")</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="definition">
+                <strong>Regla de Oro</strong>
+                <p>Siempre usa try-catch para operaciones que pueden fallar (lectura de archivos, conexiones, conversiones de tipos).</p>
+            </div>
+        </section>
+
+        <!-- Sección 8: Librerías y API -->
+        <section id="librerias">
+            <h2>8. Librerías y API de Java</h2>
+            
+            <p>Java cuenta con una amplia <strong>biblioteca estándar (API)</strong> que incluye herramientas para realizar muchas tareas sin necesidad de programarlas desde cero.</p>
+
+            <p>Estas librerías permiten trabajar con archivos, redes, interfaces gráficas, bases de datos y mucho más. Además, existen librerías externas que amplían aún más sus capacidades.</p>
+
+            <h3>Librerías Estándar Comunes</h3>
+
+            <h4>java.util.Scanner - Entrada de Usuario</h4>
+            <pre><code>import java.util.Scanner;
+
+public class Entrada {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        System.out.print("Ingresa tu nombre: ");
+        String nombre = sc.nextLine();
+        
+        System.out.print("Ingresa tu edad: ");
+        int edad = sc.nextInt();
+        
+        System.out.println("Hola " + nombre + ", tienes " + edad + " años");
+    }
+}</code></pre>
+
+            <h4>java.util.ArrayList - Listas Dinámicas</h4>
+            <pre><code>import java.util.ArrayList;
+
+public class Listas {
+    public static void main(String[] args) {
+        ArrayList&lt;String&gt; frutas = new ArrayList&lt;&gt;();
+        
+        frutas.add("Manzana");
+        frutas.add("Banana");
+        frutas.add("Naranja");
+        
+        for (String fruta : frutas) {
+            System.out.println(fruta);
+        }
+    }
+}</code></pre>
+
+            <h4>java.io.File - Manejo de Archivos</h4>
+            <pre><code>import java.io.File;
+
+public class Archivos {
+    public static void main(String[] args) {
+        File archivo = new File("datos.txt");
+        
+        if (archivo.exists()) {
+            System.out.println("El archivo existe");
+            System.out.println("Nombre: " + archivo.getName());
+            System.out.println("Tamaño: " + archivo.length());
+        }
+    }
+}</code></pre>
+
+            <h4>java.time - Fecha y Hora</h4>
+            <pre><code>import java.time.LocalDate;
+import java.time.LocalDateTime;
+
+public class Fechas {
+    public static void main(String[] args) {
+        LocalDate hoy = LocalDate.now();
+        LocalDateTime ahora = LocalDateTime.now();
+        
+        System.out.println("Fecha: " + hoy);
+        System.out.println("Fecha y Hora: " + ahora);
+    }
+}</code></pre>
+
+            <h3>Librerías Populares Externas</h3>
+            <ul>
+                <li><strong>Spring Framework:</strong> Desarrollo web</li>
+                <li><strong>Hibernate:</strong> Acceso a bases de datos</li>
+                <li><strong>Apache Commons:</strong> Utilidades comunes</li>
+                <li><strong>JUnit:</strong> Testing</li>
+                <li><strong>Gson/Jackson:</strong> Trabajo con JSON</li>
+            </ul>
+
+            <div class="definition">
+                <strong>import - Importar Librerías</strong>
+                <p>Para usar una librería, necesitas importarla: <code>import java.util.Scanner;</code></p>
+            </div>
+        </section>
+
+        <!-- Sección 9: Portabilidad -->
+        <section id="portabilidad">
+            <h2>9. Portabilidad (Write Once, Run Anywhere)</h2>
+            
+            <p>Una de las características más importantes de Java es su <strong>portabilidad</strong>. Gracias a la JVM, el código se convierte en <strong>bytecode</strong>, que puede ejecutarse en cualquier sistema que tenga instalada la máquina virtual.</p>
+
+            <p>Esto significa que no importa si el usuario usa Windows, Linux o Mac, el programa funcionará igual.</p>
+
+            <h3>¿Cómo Funciona la Portabilidad?</h3>
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Paso</th>
+                        <th>Proceso</th>
+                        <th>Resultado</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Escribir código en .java</td>
+                        <td>Archivo de código fuente</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Compilar con javac</td>
+                        <td>Archivo .class (bytecode)</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>JVM interpreta bytecode</td>
+                        <td>Ejecución en cualquier SO</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Ventajas de la Portabilidad</h3>
+            <ul>
+                <li>Desarrolla una vez, ejecuta en cualquier lugar</li>
+                <li>No necesitas recompilar para diferentes sistemas</li>
+                <li>Facilita la distribución de aplicaciones</li>
+                <li>Reduce costos de desarrollo</li>
+            </ul>
+
+            <h3>Comparación: Java vs Otros Lenguajes</h3>
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Lenguaje</th>
+                        <th>Windows</th>
+                        <th>Linux</th>
+                        <th>Mac</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Java</td>
+                        <td>✓ (con JVM)</td>
+                        <td>✓ (con JVM)</td>
+                        <td>✓ (con JVM)</td>
+                    </tr>
+                    <tr>
+                        <td>C/C++</td>
+                        <td>✓ (recompilar)</td>
+                        <td>✓ (recompilar)</td>
+                        <td>✓ (recompilar)</td>
+                    </tr>
+                    <tr>
+                        <td>Python</td>
+                        <td>✓ (con Python)</td>
+                        <td>✓ (con Python)</td>
+                        <td>✓ (con Python)</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="definition">
+                <strong>WORA: Write Once, Run Anywhere</strong>
+                <p>Este es el lema de Java que refleja perfectamente su capacidad de portabilidad. Es una de las razones principales de su éxito empresarial.</p>
+            </div>
+        </section>
+
+        <!-- Sección 10: Uso en la Vida Real -->
+        <section id="vida-real">
+            <h2>10. Uso de Java en la Vida Real</h2>
+            
+            <p>Java es ampliamente utilizado en el mundo real en múltiples industrias. Empresas como Amazon, Oracle, IBM, Facebook y Google lo utilizan para desarrollar sistemas robustos y seguros.</p>
+
+            <h3>Áreas de Aplicación</h3>
+
+            <h4>Desarrollo de Aplicaciones Android</h4>
+            <p>Java es el lenguaje principal para desarrollar aplicaciones móviles para Android (aunque ahora Kotlin también se usa mucho).</p>
+
+            <h4>Sistemas Bancarios y Financieros</h4>
+            <p>Su seguridad y confiabilidad lo hacen ideal para transacciones y sistemas críticos.</p>
+
+            <h4>Plataformas Web</h4>
+            <p>Frameworks como Spring y Spring Boot permiten crear aplicaciones web escalables.</p>
+
+            <h4>Software Empresarial</h4>
+            <p>ERP, CRM y otros sistemas grandes utilizan Java.</p>
+
+            <h4>Big Data y Analytics</h4>
+            <p>Plataformas como Hadoop y Spark utilizan Java.</p>
+
+            <h3>Ejemplo Práctico: Programa Interactivo</h3>
+            <pre><code>import java.util.Scanner;
+
+public class Usuario {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        System.out.print("Tu nombre: ");
+        String nombre = sc.nextLine();
+        
+        System.out.print("Tu edad: ");
+        int edad = sc.nextInt();
+        
+        System.out.println("Bienvenido " + nombre);
+        
+        if (edad >= 18) {
+            System.out.println("Eres mayor de edad");
+        } else {
+            System.out.println("Eres menor de edad");
+        }
+    }
+}</code></pre>
+
+            <h3>Empresas Que Usan Java</h3>
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Empresa</th>
+                        <th>Uso de Java</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Amazon</td>
+                        <td>Backend y sistemas distribuidos</td>
+                    </tr>
+                    <tr>
+                        <td>Google</td>
+                        <td>Android, YouTube, infraestructura</td>
+                    </tr>
+                    <tr>
+                        <td>Netflix</td>
+                        <td>Plataforma de streaming</td>
+                    </tr>
+                    <tr>
+                        <td>Oracle</td>
+                        <td>Propietarios de Java, bases de datos</td>
+                    </tr>
+                    <tr>
+                        <td>IBM</td>
+                        <td>Sistemas empresariales</td>
+                    </tr>
+                    <tr>
+                        <td>Twitter</td>
+                        <td>Backend de la plataforma</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Ventajas de Java en el Mundo Real</h3>
+            <ul>
+                <li><strong>Confiabilidad:</strong> Sistemas bancarios confían en Java</li>
+                <li><strong>Escalabilidad:</strong> Puede manejar millones de usuarios</li>
+                <li><strong>Seguridad:</strong> Encriptación y autenticación robustas</li>
+                <li><strong>Mantenibilidad:</strong> Código robusto y bien documentado</li>
+                <li><strong>Comunidad:</strong> Millones de desarrolladores en todo el mundo</li>
+            </ul>
+
+            <h3>Futuro de Java</h3>
+            <p>Java continúa siendo relevante con:</p>
+            <ul>
+                <li>Nuevas versiones con mejoras constantes</li>
+                <li>Adopción en Cloud Computing (AWS, Azure, Google Cloud)</li>
+                <li>Microservicios con Spring Boot</li>
+                <li>Containerización con Docker y Kubernetes</li>
+            </ul>
+
+            <div class="definition">
+                <strong>Java Sigue Siendo Número 1</strong>
+                <p>Según estudios recientes, Java sigue siendo el lenguaje más demandado en el mercado laboral, especialmente para posiciones senior en empresas grandes.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Guía Completa de Java. Todos los derechos reservados.</p>
+        <p>Autor: Recursos Educativos</p>
+        <p>Última actualización: Marzo 2026</p>
+    </footer>
+</body>
+</html>

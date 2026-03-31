@@ -1,0 +1,1106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8428793459037062"
+     crossorigin="anonymous"></script>
+<meta name="google-adsense-account" content="ca-pub-8428793459037062">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guía Completa de Python - Lenguaje de Programación</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2rem 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        header h1 {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            font-size: 2.5rem;
+        }
+
+        nav {
+            background-color: #333;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav ul {
+            list-style: none;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+            font-size: 0.9rem;
+        }
+
+        nav a:hover {
+            background-color: #667eea;
+        }
+
+        main {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 20px;
+        }
+
+        section {
+            background: white;
+            margin-bottom: 2rem;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        section h2 {
+            color: #667eea;
+            margin-bottom: 1rem;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 0.5rem;
+        }
+
+        section h3 {
+            color: #764ba2;
+            margin-top: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        section h4 {
+            color: #764ba2;
+            margin-top: 1rem;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .definition {
+            background-color: #f0f4ff;
+            border-left: 4px solid #667eea;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 4px;
+        }
+
+        .definition strong {
+            color: #667eea;
+        }
+
+        pre {
+            background-color: #282c34;
+            color: #abb2bf;
+            padding: 1.5rem;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin: 1rem 0;
+            font-family: 'Courier New', monospace;
+            line-height: 1.5;
+        }
+
+        code {
+            font-family: 'Courier New', monospace;
+            background-color: #f0f0f0;
+            padding: 0.2rem 0.4rem;
+            border-radius: 3px;
+            color: #d63384;
+        }
+
+        pre code {
+            background-color: transparent;
+            color: #abb2bf;
+            padding: 0;
+        }
+
+        ul, ol {
+            margin-left: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        .example-box {
+            background-color: #fffbea;
+            border: 1px solid #ffd700;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 4px;
+        }
+
+        .example-box strong {
+            color: #ff6b00;
+        }
+
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+        }
+
+        .comparison-table th,
+        .comparison-table td {
+            border: 1px solid #ddd;
+            padding: 0.75rem;
+            text-align: left;
+        }
+
+        .comparison-table th {
+            background-color: #667eea;
+            color: white;
+        }
+
+        .comparison-table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        .tipo-dato {
+            background-color: #e8f4f8;
+            border-left: 4px solid #667eea;
+            padding: 1rem;
+            margin: 0.5rem 0;
+            border-radius: 4px;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+
+        footer p {
+            margin: 0.5rem 0;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8rem;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+
+            nav a {
+                font-size: 0.85rem;
+                padding: 0.4rem 0.8rem;
+            }
+
+            main {
+                padding: 0 15px;
+            }
+
+            section {
+                padding: 1.5rem;
+            }
+
+            .comparison-table {
+                font-size: 0.9rem;
+            }
+
+            .comparison-table th,
+            .comparison-table td {
+                padding: 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+ <nav>
+        <a href="index.html">Inicio</a> |
+        <a href="html.html">HTML</a> |
+        <a href="css.html">CSS</a> |
+        <a href="java.html">Java</a> |
+        <a href="python.html">Python</a> |
+        <a href="privacidad.html">privacidad</a>
+    </nav>
+    <header>
+        <h1>🐍 Guía Completa de Python</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#que-es-python">¿Qué es Python?</a></li>
+            <li><a href="#sintaxis">Sintaxis Simple</a></li>
+            <li><a href="#variables">Variables</a></li>
+            <li><a href="#control">Control</a></li>
+            <li><a href="#funciones">Funciones</a></li>
+            <li><a href="#colecciones">Colecciones</a></li>
+            <li><a href="#poo">Programación OOP</a></li>
+            <li><a href="#librerias">Librerías</a></li>
+            <li><a href="#automatizacion">Automatización</a></li>
+            <li><a href="#vida-real">Vida Real</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <!-- Sección 1: ¿Qué es Python? -->
+        <section id="que-es-python">
+            <h2>1. ¿Qué es Python?</h2>
+            
+            <p>Python es un lenguaje de programación de alto nivel, interpretado y de propósito general, lo que significa que puede utilizarse para desarrollar una gran variedad de aplicaciones. Fue creado por Guido van Rossum a finales de los años 80 y lanzado oficialmente en 1991. Desde entonces, ha crecido hasta convertirse en uno de los lenguajes más utilizados en el mundo.</p>
+
+            <p>Una de las principales características de Python es su enfoque en la legibilidad del código. Esto significa que su sintaxis está diseñada para ser clara y fácil de entender, incluso para personas que están comenzando a programar. A diferencia de otros lenguajes que pueden ser complejos y difíciles de leer, Python utiliza palabras simples y estructuras ordenadas.</p>
+
+            <p>Python es ampliamente utilizado en diferentes áreas como desarrollo web, automatización de tareas, inteligencia artificial, análisis de datos, desarrollo de videojuegos y más. Su versatilidad lo convierte en una herramienta muy poderosa tanto para principiantes como para profesionales.</p>
+
+            <p>Además, Python es un lenguaje interpretado, lo que significa que no necesita ser compilado antes de ejecutarse. Esto permite probar código de forma rápida y facilita el aprendizaje.</p>
+
+            <h3>El Programa Más Simple: Hola Mundo</h3>
+            <pre><code>print("Hola mundo")</code></pre>
+
+            <p>Este es el programa más básico en Python, y muestra un mensaje en pantalla. Aunque es simple, demuestra la facilidad de Python para realizar tareas básicas.</p>
+
+            <h3>Características Principales de Python</h3>
+            <ul>
+                <li><strong>Legible:</strong> Código claro y fácil de entender</li>
+                <li><strong>Interpretado:</strong> Se ejecuta sin compilación previa</li>
+                <li><strong>Dinámico:</strong> No requiere declaración de tipos</li>
+                <li><strong>Versatil:</strong> Múltiples aplicaciones</li>
+                <li><strong>Amplia comunidad:</strong> Muchos recursos disponibles</li>
+            </ul>
+
+            <div class="definition">
+                <strong>Dato Histórico</strong>
+                <p>El nombre "Python" no viene de la serpiente, sino de la serie de comedia británica "Monty Python". Guido van Rossum era fan de la serie cuando creó el lenguaje.</p>
+            </div>
+        </section>
+
+        <!-- Sección 2: Sintaxis Simple -->
+        <section id="sintaxis">
+            <h2>2. Sintaxis Simple y Legible</h2>
+            
+            <p>Una de las mayores ventajas de Python es su sintaxis sencilla y clara. A diferencia de otros lenguajes como C o Java, Python no utiliza llaves {} para definir bloques de código, sino que usa la <strong>indentación</strong> (espacios al inicio de cada línea).</p>
+
+            <p>Esto obliga a los programadores a escribir código ordenado, lo cual facilita la lectura y comprensión. La indentación no es opcional en Python, es obligatoria, y un error en ella puede hacer que el programa no funcione correctamente.</p>
+
+            <p>Este enfoque hace que Python sea ideal para principiantes, ya que permite enfocarse más en la lógica del programa que en la complejidad de la sintaxis.</p>
+
+            <h3>Ejemplo: Condicional con Indentación</h3>
+            <pre><code>if 10 > 5:
+    print("Diez es mayor que cinco")</code></pre>
+
+            <p>Aquí, el <code>print</code> está indentado, lo que indica que pertenece al bloque del <code>if</code>. Si no hubiera indentación correcta, el código generaría un error.</p>
+
+            <h3>Comparación con Otros Lenguajes</h3>
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Lenguaje</th>
+                        <th>Ejemplo</th>
+                        <th>Complejidad</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Python</td>
+                        <td><code>if x > 5:<br>    print(x)</code></td>
+                        <td>Baja</td>
+                    </tr>
+                    <tr>
+                        <td>Java</td>
+                        <td><code>if (x > 5) {<br>    System.out.println(x);<br>}</code></td>
+                        <td>Media</td>
+                    </tr>
+                    <tr>
+                        <td>C</td>
+                        <td><code>if (x > 5) {<br>    printf("%d", x);<br>}</code></td>
+                        <td>Alta</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>La Importancia de la Indentación</h3>
+            <pre><code># Código correcto
+if edad > 18:
+    print("Mayor de edad")
+    print("Puede votar")
+
+# Código incorrecto (error)
+if edad > 18:
+print("Mayor de edad")  # Error: falta indentación</code></pre>
+
+            <div class="definition">
+                <strong>Regla de Oro</strong>
+                <p>En Python, la indentación es sintaxis. Generalmente se usan 4 espacios (o una tabulación) para cada nivel de indentación.</p>
+            </div>
+        </section>
+
+        <!-- Sección 3: Variables y Tipos de Datos -->
+        <section id="variables">
+            <h2>3. Variables y Tipos de Datos</h2>
+            
+            <p>En Python, las variables se utilizan para almacenar información. A diferencia de otros lenguajes, no es necesario declarar el tipo de variable, ya que Python lo asigna automáticamente dependiendo del valor.</p>
+
+            <p>Esto se conoce como <strong>tipado dinámico</strong>, y permite escribir código más rápido y flexible.</p>
+
+            <h3>Tipos de Datos Comunes</h3>
+
+            <div class="tipo-dato">
+                <strong>Enteros (int):</strong> Números sin decimales
+                <pre><code>edad = 25
+numero = -50
+cantidad = 1000</code></pre>
+            </div>
+
+            <div class="tipo-dato">
+                <strong>Flotantes (float):</strong> Números con decimales
+                <pre><code>altura = 1.75
+precio = 19.99
+pi = 3.14159</code></pre>
+            </div>
+
+            <div class="tipo-dato">
+                <strong>Cadenas (str):</strong> Texto
+                <pre><code>nombre = "Luis"
+ciudad = 'Madrid'
+mensaje = "Hola, ¿cómo estás?"</code></pre>
+            </div>
+
+            <div class="tipo-dato">
+                <strong>Booleanos (bool):</strong> Verdadero o Falso
+                <pre><code>es_estudiante = True
+activo = False
+mayor_de_edad = True</code></pre>
+            </div>
+
+            <h3>Ejemplo Completo</h3>
+            <pre><code>nombre = "Luis"
+edad = 16
+altura = 1.75
+es_estudiante = True
+
+print(nombre)
+print(edad)
+print(altura)
+print(es_estudiante)</code></pre>
+
+            <h3>Cambio Dinámico de Tipos</h3>
+            <p>En Python, puedes cambiar el tipo de una variable en cualquier momento:</p>
+            <pre><code>valor = 10              # int
+print(type(valor))     # &lt;class 'int'&gt;
+
+valor = "texto"        # str
+print(type(valor))     # &lt;class 'str'&gt;
+
+valor = 3.14           # float
+print(type(valor))     # &lt;class 'float'&gt;</code></pre>
+
+            <h3>Operaciones Básicas</h3>
+            <pre><code># Operaciones matemáticas
+a = 10
+b = 3
+
+suma = a + b          # 13
+resta = a - b         # 7
+multiplicacion = a * b # 30
+division = a / b      # 3.333...
+potencia = a ** b     # 1000
+modulo = a % b        # 1</code></pre>
+
+            <div class="definition">
+                <strong>Concepto Importante</strong>
+                <p>La función <code>type()</code> te permite verificar el tipo de dato de cualquier variable.</p>
+            </div>
+        </section>
+
+        <!-- Sección 4: Estructuras de Control -->
+        <section id="control">
+            <h2>4. Estructuras de Control</h2>
+            
+            <p>Las estructuras de control permiten que un programa tome decisiones y repita acciones. Son fundamentales para crear programas interactivos y funcionales.</p>
+
+            <h3>Condicionales (if, elif, else)</h3>
+            <p>Permiten ejecutar código dependiendo de una condición.</p>
+
+            <h4>Ejemplo Básico</h4>
+            <pre><code>edad = 17
+
+if edad >= 18:
+    print("Mayor de edad")
+else:
+    print("Menor de edad")</code></pre>
+
+            <h4>Ejemplo con elif</h4>
+            <pre><code>calificacion = 8
+
+if calificacion >= 9:
+    print("Sobresaliente")
+elif calificacion >= 7:
+    print("Notable")
+elif calificacion >= 5:
+    print("Aprobado")
+else:
+    print("Suspenso")</code></pre>
+
+            <h3>Operadores de Comparación</h3>
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Operador</th>
+                        <th>Significado</th>
+                        <th>Ejemplo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>==</td>
+                        <td>Igual a</td>
+                        <td><code>x == 5</code></td>
+                    </tr>
+                    <tr>
+                        <td>!=</td>
+                        <td>No igual a</td>
+                        <td><code>x != 5</code></td>
+                    </tr>
+                    <tr>
+                        <td>&gt;</td>
+                        <td>Mayor que</td>
+                        <td><code>x > 5</code></td>
+                    </tr>
+                    <tr>
+                        <td>&lt;</td>
+                        <td>Menor que</td>
+                        <td><code>x < 5</code></td>
+                    </tr>
+                    <tr>
+                        <td>&gt;=</td>
+                        <td>Mayor o igual</td>
+                        <td><code>x >= 5</code></td>
+                    </tr>
+                    <tr>
+                        <td>&lt;=</td>
+                        <td>Menor o igual</td>
+                        <td><code>x <= 5</code></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Bucles (for y while)</h3>
+            <p>Permiten repetir un bloque de código varias veces.</p>
+
+            <h4>Bucle for</h4>
+            <pre><code>for i in range(5):
+    print("Número:", i)
+
+# Salida:
+# Número: 0
+# Número: 1
+# Número: 2
+# Número: 3
+# Número: 4</code></pre>
+
+            <h4>Bucle while</h4>
+            <pre><code>contador = 0
+
+while contador < 5:
+    print("Contador:", contador)
+    contador = contador + 1
+
+# Se ejecuta mientras contador sea menor que 5</code></pre>
+
+            <h4>Ejemplo Práctico</h4>
+            <pre><code>numeros = [1, 2, 3, 4, 5]
+
+for numero in numeros:
+    if numero % 2 == 0:
+        print(numero, "es par")
+    else:
+        print(numero, "es impar")</code></pre>
+
+            <h3>Operadores Lógicos</h3>
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Operador</th>
+                        <th>Significado</th>
+                        <th>Ejemplo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>and</td>
+                        <td>Y lógico (ambas condiciones deben ser verdaderas)</td>
+                        <td><code>x > 5 and y < 10</code></td>
+                    </tr>
+                    <tr>
+                        <td>or</td>
+                        <td>O lógico (al menos una condición debe ser verdadera)</td>
+                        <td><code>x > 5 or y < 10</code></td>
+                    </tr>
+                    <tr>
+                        <td>not</td>
+                        <td>Negación</td>
+                        <td><code>not x > 5</code></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Sección 5: Funciones -->
+        <section id="funciones">
+            <h2>5. Funciones</h2>
+            
+            <p>Las funciones son bloques de código que se pueden reutilizar para realizar una tarea específica. Esto ayuda a evitar repetir código y facilita la organización del programa.</p>
+
+            <p>En Python, las funciones se definen con la palabra clave <code>def</code>.</p>
+
+            <h3>Función Básica</h3>
+            <pre><code>def saludar():
+    print("¡Hola!")
+
+saludar()  # Llamada a la función</code></pre>
+
+            <h3>Función con Parámetros</h3>
+            <pre><code>def sumar(a, b):
+    return a + b
+
+resultado = sumar(5, 3)
+print(resultado)  # 8</code></pre>
+
+            <h3>Función con Valor por Defecto</h3>
+            <pre><code>def saludar(nombre="usuario"):
+    print("Hola", nombre)
+
+saludar()              # Hola usuario
+saludar("María")       # Hola María</code></pre>
+
+            <h3>Función con Múltiples Parámetros</h3>
+            <pre><code>def presentacion(nombre, edad, ciudad):
+    print("Me llamo", nombre)
+    print("Tengo", edad, "años")
+    print("Soy de", ciudad)
+
+presentacion("Luis", 25, "Madrid")</code></pre>
+
+            <h3>Función que Devuelve Múltiples Valores</h3>
+            <pre><code>def obtener_datos():
+    nombre = "Ana"
+    edad = 20
+    return nombre, edad
+
+name, age = obtener_datos()
+print(name, age)</code></pre>
+
+            <h3>Docstrings (Documentación)</h3>
+            <pre><code>def calcular_area_rectangulo(largo, ancho):
+    """
+    Calcula el área de un rectángulo.
+    
+    Parámetros:
+    - largo: el largo del rectángulo
+    - ancho: el ancho del rectángulo
+    
+    Devuelve:
+    - El área del rectángulo
+    """
+    return largo * ancho
+
+area = calcular_area_rectangulo(10, 5)
+print(area)</code></pre>
+
+            <div class="definition">
+                <strong>Ventajas de las Funciones</strong>
+                <ul>
+                    <li>Evitan repetición de código</li>
+                    <li>Hacen el código más organizado</li>
+                    <li>Facilitan el mantenimiento</li>
+                    <li>Permiten reutilizar código</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Sección 6: Colecciones de Datos -->
+        <section id="colecciones">
+            <h2>6. Listas y Colecciones de Datos</h2>
+            
+            <p>Python ofrece varias formas de almacenar múltiples datos en una sola variable. Las listas son las más comunes, pero también existen otras estructuras como tuplas, diccionarios y conjuntos.</p>
+
+            <h3>Listas</h3>
+            <p>Las listas son colecciones ordenadas y modificables.</p>
+
+            <h4>Ejemplo Básico</h4>
+            <pre><code>frutas = ["manzana", "pera", "uva"]
+
+for fruta in frutas:
+    print(fruta)</code></pre>
+
+            <h4>Operaciones con Listas</h4>
+            <pre><code>numeros = [1, 2, 3, 4, 5]
+
+# Acceder a elementos
+print(numeros[0])        # 1
+print(numeros[-1])       # 5 (último elemento)
+
+# Agregar elementos
+numeros.append(6)        # [1, 2, 3, 4, 5, 6]
+numeros.insert(0, 0)     # [0, 1, 2, 3, 4, 5, 6]
+
+# Eliminar elementos
+numeros.remove(3)        # Elimina el valor 3
+ultimo = numeros.pop()   # Elimina el último
+
+# Longitud
+print(len(numeros))      # Cantidad de elementos</code></pre>
+
+            <h3>Diccionarios</h3>
+            <p>Los diccionarios permiten almacenar datos en pares clave-valor:</p>
+
+            <pre><code>persona = {
+    "nombre": "Ana",
+    "edad": 20,
+    "ciudad": "Barcelona"
+}
+
+print(persona["nombre"])    # Ana
+print(persona["edad"])      # 20
+
+# Agregar elementos
+persona["profesion"] = "Ingeniera"
+
+# Recorrer diccionario
+for clave, valor in persona.items():
+    print(clave, ":", valor)</code></pre>
+
+            <h3>Tuplas</h3>
+            <p>Las tuplas son similares a listas, pero inmutables (no se pueden modificar):</p>
+
+            <pre><code>coordenadas = (10, 20, 30)
+
+print(coordenadas[0])   # 10
+print(len(coordenadas)) # 3
+
+# Las tuplas no se pueden modificar
+# coordenadas[0] = 15   # Error</code></pre>
+
+            <h3>Conjuntos (Sets)</h3>
+            <p>Los conjuntos almacenan elementos únicos sin orden:</p>
+
+            <pre><code>numeros = {1, 2, 3, 4, 5}
+numeros.add(6)          # Agregar
+numeros.remove(3)       # Eliminar
+
+# Operaciones de conjunto
+a = {1, 2, 3}
+b = {3, 4, 5}
+
+union = a.union(b)      # {1, 2, 3, 4, 5}
+interseccion = a.intersection(b)  # {3}</code></pre>
+
+            <h3>Comparación de Colecciones</h3>
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Tipo</th>
+                        <th>Ordenada</th>
+                        <th>Modificable</th>
+                        <th>Elementos Únicos</th>
+                        <th>Ejemplo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Lista</td>
+                        <td>Sí</td>
+                        <td>Sí</td>
+                        <td>No</td>
+                        <td><code>[1, 2, 3]</code></td>
+                    </tr>
+                    <tr>
+                        <td>Tupla</td>
+                        <td>Sí</td>
+                        <td>No</td>
+                        <td>No</td>
+                        <td><code>(1, 2, 3)</code></td>
+                    </tr>
+                    <tr>
+                        <td>Diccionario</td>
+                        <td>Sí</td>
+                        <td>Sí</td>
+                        <td>Claves únicas</td>
+                        <td><code>{"a": 1}</code></td>
+                    </tr>
+                    <tr>
+                        <td>Conjunto</td>
+                        <td>No</td>
+                        <td>Sí</td>
+                        <td>Sí</td>
+                        <td><code>{1, 2, 3}</code></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Sección 7: Programación Orientada a Objetos -->
+        <section id="poo">
+            <h2>7. Programación Orientada a Objetos (POO)</h2>
+            
+            <p>Python soporta la programación orientada a objetos (POO), que permite crear estructuras más organizadas y reutilizables.</p>
+
+            <p>Se basa en <strong>clases</strong> y <strong>objetos</strong>, donde una clase es como un molde y un objeto es una instancia de esa clase.</p>
+
+            <h3>Concepto Básico</h3>
+            <pre><code>class Animal:
+    def __init__(self, nombre):
+        self.nombre = nombre
+
+    def hablar(self):
+        print("Hace un sonido")
+
+perro = Animal("Firulais")
+print(perro.nombre)  # Firulais
+perro.hablar()       # Hace un sonido</code></pre>
+
+            <h3>Atributos y Métodos</h3>
+            <p><strong>Atributos:</strong> características del objeto<br><strong>Métodos:</strong> acciones que puede realizar el objeto</p>
+
+            <pre><code>class Persona:
+    def __init__(self, nombre, edad):
+        # Atributos
+        self.nombre = nombre
+        self.edad = edad
+    
+    # Métodos
+    def presentarse(self):
+        print("Me llamo", self.nombre)
+        print("Tengo", self.edad, "años")
+    
+    def cumplir_años(self):
+        self.edad = self.edad + 1
+        print(self.nombre, "ahora tiene", self.edad, "años")
+
+# Crear objeto
+juan = Persona("Juan", 25)
+juan.presentarse()
+juan.cumplir_años()</code></pre>
+
+            <h3>Herencia</h3>
+            <p>La herencia permite que una clase herede características de otra:</p>
+
+            <pre><code>class Animal:
+    def __init__(self, nombre):
+        self.nombre = nombre
+    
+    def hacer_sonido(self):
+        print("Sonido genérico")
+
+class Perro(Animal):
+    def hacer_sonido(self):
+        print("¡Guau!")
+
+class Gato(Animal):
+    def hacer_sonido(self):
+        print("¡Miau!")
+
+perro = Perro("Rex")
+gato = Gato("Misi")
+
+perro.hacer_sonido()  # ¡Guau!
+gato.hacer_sonido()   # ¡Miau!</code></pre>
+
+            <h3>Concepto Importante: self</h3>
+            <pre><code>class Coche:
+    def __init__(self, marca):
+        self.marca = marca  # 'self' hace referencia al objeto
+    
+    def mostrar_marca(self):
+        print("Este coche es de marca:", self.marca)
+
+mi_coche = Coche("Toyota")
+mi_coche.mostrar_marca()  # Este coche es de marca: Toyota</code></pre>
+
+            <div class="definition">
+                <strong>¿Por qué POO?</strong>
+                <p>La POO permite modelar situaciones del mundo real dentro de un programa. Por ejemplo, puedes crear una clase "Estudiante" con atributos como nombre, edad y calificación, y métodos como estudiar() o presentar_examen().</p>
+            </div>
+        </section>
+
+        <!-- Sección 8: Librerías y Módulos -->
+        <section id="librerias">
+            <h2>8. Librerías y Módulos</h2>
+            
+            <p>Una de las mayores ventajas de Python es su gran cantidad de librerías. Estas son colecciones de código ya hecho que puedes usar para ahorrar tiempo y esfuerzo.</p>
+
+            <p>Existen librerías para prácticamente cualquier tarea: matemáticas, ciencia de datos, inteligencia artificial, desarrollo web, y mucho más.</p>
+
+            <h3>Librerías Estándar (integradas)</h3>
+
+            <h4>math - Operaciones Matemáticas</h4>
+            <pre><code>import math
+
+print(math.pi)           # 3.141592653589793
+print(math.sqrt(16))     # 4.0
+print(math.pow(2, 3))    # 8.0
+print(math.ceil(4.3))    # 5 (redondea hacia arriba)
+print(math.floor(4.7))   # 4 (redondea hacia abajo)</code></pre>
+
+            <h4>random - Números Aleatorios</h4>
+            <pre><code>import random
+
+numero = random.randint(1, 10)  # Número aleatorio entre 1 y 10
+print(numero)
+
+lista = [1, 2, 3, 4, 5]
+elemento = random.choice(lista)  # Elige un elemento aleatorio
+print(elemento)</code></pre>
+
+            <h4>datetime - Fecha y Hora</h4>
+            <pre><code>import datetime
+
+hoy = datetime.datetime.now()
+print(hoy)  # Fecha y hora actual
+
+fecha = datetime.datetime(2026, 3, 31)
+print(fecha)</code></pre>
+
+            <h4>os - Operaciones del Sistema</h4>
+            <pre><code>import os
+
+# Obtener el directorio actual
+print(os.getcwd())
+
+# Listar archivos
+print(os.listdir('.'))
+
+# Crear carpeta
+os.mkdir('nueva_carpeta')</code></pre>
+
+            <h3>Librerías Populares (terceros)</h3>
+            <ul>
+                <li><strong>NumPy:</strong> Cálculos numéricos avanzados</li>
+                <li><strong>Pandas:</strong> Análisis y manipulación de datos</li>
+                <li><strong>Matplotlib:</strong> Gráficos y visualización</li>
+                <li><strong>Django:</strong> Desarrollo web</li>
+                <li><strong>TensorFlow/PyTorch:</strong> Inteligencia artificial</li>
+                <li><strong>Pygame:</strong> Desarrollo de videojuegos</li>
+            </ul>
+
+            <h3>Importar Librerías</h3>
+            <pre><code># Importar módulo completo
+import math
+
+# Importar función específica
+from math import sqrt
+
+# Importar todo (no recomendado)
+from math import *
+
+# Importar con alias
+import numpy as np</code></pre>
+
+            <h3>Ver Funciones de una Librería</h3>
+            <pre><code>import math
+
+print(dir(math))  # Lista todas las funciones disponibles
+help(math.sqrt)   # Ayuda sobre una función específica</code></pre>
+
+            <div class="definition">
+                <strong>Instalación de Librerías</strong>
+                <p>Para instalar librerías de terceros, usa el comando: <code>pip install nombre_libreria</code></p>
+            </div>
+        </section>
+
+        <!-- Sección 9: Automatización de Tareas -->
+        <section id="automatizacion">
+            <h2>9. Automatización de Tareas</h2>
+            
+            <p>Python es muy popular para automatizar tareas repetitivas, lo que ahorra tiempo y esfuerzo. Una sola línea de código puede hacer lo que normalmente requeriría múltiples clics manuales.</p>
+
+            <h3>Tareas Comunes de Automatización</h3>
+            <ul>
+                <li>Procesar archivos</li>
+                <li>Organizar datos</li>
+                <li>Enviar correos automáticos</li>
+                <li>Renombrar archivos en masa</li>
+                <li>Descargar contenido web</li>
+                <li>Realizar backups</li>
+            </ul>
+
+            <h3>Ejemplo: Simulación de Procesamiento de Archivos</h3>
+            <pre><code>for i in range(1, 6):
+    print("Procesando archivo", i)
+    print("- Leyendo datos...")
+    print("- Analizando información...")
+    print("- Guardando resultados...")
+    print("✓ Archivo", i, "completado\n")</code></pre>
+
+            <h3>Ejemplo: Renombrar Archivos</h3>
+            <pre><code>import os
+
+# Ejemplo conceptual
+archivos = ["imagen1.jpg", "imagen2.jpg", "imagen3.jpg"]
+
+for i, archivo in enumerate(archivos):
+    nuevo_nombre = f"foto_{i+1:02d}.jpg"
+    print(f"Renombrando {archivo} a {nuevo_nombre}")</code></pre>
+
+            <h3>Ejemplo: Lectura de Archivos</h3>
+            <pre><code>with open("datos.txt", "r") as archivo:
+    contenido = archivo.read()
+    print(contenido)
+
+# Procesar línea por línea
+with open("datos.txt", "r") as archivo:
+    for linea in archivo:
+        print(linea.strip())  # strip() elimina espacios en blanco</code></pre>
+
+            <h3>Ejemplo: Crear Archivos Masivamente</h3>
+            <pre><code>for mes in range(1, 13):
+    nombre_archivo = f"reporte_{mes:02d}.txt"
+    with open(nombre_archivo, "w") as archivo:
+        archivo.write(f"Reporte del mes {mes}\n")
+        archivo.write("Datos...\n")
+    print(f"Creado: {nombre_archivo}")</code></pre>
+
+            <h3>Ventajas de la Automatización</h3>
+            <ul>
+                <li><strong>Ahorro de tiempo:</strong> Tareas que toman horas se hacen en segundos</li>
+                <li><strong>Menos errores:</strong> Eliminan errores humanos</li>
+                <li><strong>Productividad:</strong> Te libera para otras tareas</li>
+                <li><strong>Consistencia:</strong> Resultados siempre iguales</li>
+            </ul>
+
+            <div class="definition">
+                <strong>Ejemplo del Mundo Real</strong>
+                <p>Una empresa necesitaba procesar 10,000 archivos de datos. Manualmente tomaría meses. Con Python, se automatizó y completó en minutos.</p>
+            </div>
+        </section>
+
+        <!-- Sección 10: Uso en la Vida Real -->
+        <section id="vida-real">
+            <h2>10. Uso de Python en la Vida Real</h2>
+            
+            <p>Python se utiliza en muchas áreas del mundo real. Empresas como Google, Netflix, Spotify, Instagram y Dropbox lo utilizan para diferentes propósitos.</p>
+
+            <h3>Áreas de Aplicación</h3>
+
+            <h4>Inteligencia Artificial y Machine Learning</h4>
+            <ul>
+                <li>Reconocimiento de imágenes</li>
+                <li>Procesamiento de lenguaje natural</li>
+                <li>Sistemas de recomendación</li>
+                <li>Conducción autónoma</li>
+            </ul>
+
+            <h4>Análisis de Datos</h4>
+            <ul>
+                <li>Análisis de Big Data</li>
+                <li>Visualización de datos</li>
+                <li>Investigación científica</li>
+                <li>Análisis de redes sociales</li>
+            </ul>
+
+            <h4>Desarrollo Web</h4>
+            <ul>
+                <li>Backend con Django y Flask</li>
+                <li>APIs REST</li>
+                <li>Aplicaciones web fullstack</li>
+            </ul>
+
+            <h4>Automatización y Scripting</h4>
+            <ul>
+                <li>Automatización de tareas del sistema</li>
+                <li>Administración de servidores</li>
+                <li>Scripting de DevOps</li>
+            </ul>
+
+            <h3>Ejemplo Práctico: Interacción con el Usuario</h3>
+            <pre><code>nombre = input("¿Cómo te llamas? ")
+edad = int(input("¿Cuántos años tienes? "))
+
+print("Hola", nombre)
+print("Tienes", edad, "años")
+
+if edad >= 18:
+    print("Eres mayor de edad")
+else:
+    print("Eres menor de edad")</code></pre>
+
+            <h3>Empresas Que Usan Python</h3>
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Empresa</th>
+                        <th>Uso de Python</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Google</td>
+                        <td>Búsqueda, indexación web, administración de sistemas</td>
+                    </tr>
+                    <tr>
+                        <td>Netflix</td>
+                        <td>Sistemas de recomendación, análisis de datos</td>
+                    </tr>
+                    <tr>
+                        <td>Spotify</td>
+                        <td>Análisis de música, recomendaciones</td>
+                    </tr>
+                    <tr>
+                        <td>Instagram</td>
+                        <td>Backend, procesamiento de imágenes</td>
+                    </tr>
+                    <tr>
+                        <td>Dropbox</td>
+                        <td>Sincronización, cliente de escritorio</td>
+                    </tr>
+                    <tr>
+                        <td>NASA</td>
+                        <td>Procesamiento de datos espaciales</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Futuro de Python</h3>
+            <p>Python continúa creciendo en popularidad, especialmente en:</p>
+            <ul>
+                <li>Inteligencia Artificial y Machine Learning</li>
+                <li>Ciencia de datos</li>
+                <li>Computación científica</li>
+                <li>Desarrollo web moderno</li>
+            </ul>
+
+            <div class="definition">
+                <strong>¿Por qué Python es el Futuro?</strong>
+                <p>Python es el lenguaje preferido para IA y ciencia de datos. Con el crecimiento exponencial de estas áreas, Python seguirá siendo fundamental en los próximos años.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Guía Completa de Python. Todos los derechos reservados.</p>
+        <p>Autor: Recursos Educativos</p>
+        <p>Última actualización: Marzo 2026</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8428793459037062"
+     crossorigin="anonymous"></script>
+<meta name="google-adsense-account" content="ca-pub-8428793459037062">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Start - Tu Camino en la Programación</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2rem 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        header h1 {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            font-size: 2.5rem;
+        }
+
+        nav {
+            background-color: #333;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav ul {
+            list-style: none;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+            font-size: 0.9rem;
+        }
+
+        nav a:hover {
+            background-color: #667eea;
+        }
+
+        main {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 20px;
+        }
+
+        section {
+            background: white;
+            margin-bottom: 2rem;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        section h2 {
+            color: #667eea;
+            margin-bottom: 1rem;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 0.5rem;
+        }
+
+        section h3 {
+            color: #764ba2;
+            margin-top: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        section h4 {
+            color: #764ba2;
+            margin-top: 1rem;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .definition {
+            background-color: #f0f4ff;
+            border-left: 4px solid #667eea;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 4px;
+        }
+
+        .definition strong {
+            color: #667eea;
+        }
+
+        ul, ol {
+            margin-left: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        .example-box {
+            background-color: #fffbea;
+            border: 1px solid #ffd700;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 4px;
+        }
+
+        .example-box strong {
+            color: #ff6b00;
+        }
+
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+        }
+
+        .comparison-table th,
+        .comparison-table td {
+            border: 1px solid #ddd;
+            padding: 0.75rem;
+            text-align: left;
+        }
+
+        .comparison-table th {
+            background-color: #667eea;
+            color: white;
+        }
+
+        .comparison-table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        .benefit-card {
+            background-color: #f0f4ff;
+            border-left: 4px solid #667eea;
+            padding: 1.5rem;
+            margin: 1rem 0;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+
+        .benefit-card:hover {
+            transform: translateX(5px);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.2);
+        }
+
+        .benefit-card h4 {
+            color: #667eea;
+            margin-bottom: 0.5rem;
+        }
+
+        .language-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .language-card {
+            background: white;
+            border: 2px solid #667eea;
+            border-radius: 8px;
+            padding: 1.5rem;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .language-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 15px rgba(102, 126, 234, 0.2);
+            border-color: #764ba2;
+        }
+
+        .language-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .language-card h4 {
+            color: #667eea;
+            margin-bottom: 0.5rem;
+            font-size: 1.3rem;
+        }
+
+        .language-card p {
+            color: #666;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        .audience-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .audience-item {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .audience-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.3);
+        }
+
+        .audience-item strong {
+            display: block;
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .skill-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+
+        .skill-item {
+            background-color: #f0f4ff;
+            padding: 1rem;
+            border-radius: 6px;
+            border-left: 4px solid #667eea;
+        }
+
+        .skill-item strong {
+            color: #667eea;
+            display: block;
+            margin-bottom: 0.3rem;
+        }
+
+        .skill-item p {
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        .roadmap {
+            background-color: #f9f9f9;
+            padding: 2rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+        }
+
+        .roadmap-step {
+            display: flex;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+            align-items: flex-start;
+        }
+
+        .step-number {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.3rem;
+            flex-shrink: 0;
+        }
+
+        .step-content h4 {
+            color: #667eea;
+            margin-bottom: 0.5rem;
+        }
+
+        .step-content p {
+            color: #666;
+            line-height: 1.5;
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        .cta-section h3 {
+            color: white;
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: white;
+            color: #667eea;
+            padding: 0.75rem 2rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            margin-top: 1rem;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .cta-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+
+        footer p {
+            margin: 0.5rem 0;
+        }
+
+        /* Menú de Navegación Global */
+        .global-nav {
+            background-color: #222;
+            padding: 0.5rem 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            margin-bottom: 2rem;
+            border-radius: 8px;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .nav-logo {
+            color: white;
+            font-weight: bold;
+            text-decoration: none;
+            font-size: 1.1rem;
+            margin-right: 2rem;
+            transition: color 0.3s ease;
+        }
+
+        .nav-logo:hover {
+            color: #667eea;
+        }
+
+        .nav-menu {
+            list-style: none;
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .nav-link {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 0.75rem;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            font-size: 0.95rem;
+        }
+
+        .nav-link:hover {
+            background-color: #667eea;
+            color: white;
+            transform: scale(1.05);
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8rem;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+
+            nav a {
+                font-size: 0.85rem;
+                padding: 0.4rem 0.8rem;
+            }
+
+            main {
+                padding: 0 15px;
+            }
+
+            section {
+                padding: 1.5rem;
+            }
+
+            .comparison-table {
+                font-size: 0.9rem;
+            }
+
+            .comparison-table th,
+            .comparison-table td {
+                padding: 0.5rem;
+            }
+
+            .language-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .audience-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .roadmap-step {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .nav-container {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .nav-logo {
+                margin-right: 0;
+                margin-bottom: 0.5rem;
+            }
+
+            .nav-menu {
+                gap: 0.75rem;
+                justify-content: center;
+            }
+
+            .nav-link {
+                font-size: 0.85rem;
+                padding: 0.4rem 0.6rem;
+            }
+        }
+    </style>
+</head>
+<body>
+ <nav>
+        <a href="index.html">Inicio</a> |
+        <a href="html.html">HTML</a> |
+        <a href="css.html">CSS</a> |
+        <a href="java.html">Java</a> |
+        <a href="python.html">Python</a> |
+        <a href="privacidad.html">privacidad</a>
+    </nav>
+
+    <header>
+        <h1>⭐ Code Start - Tu Camino en la Programación</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#que-es">¿Qué es Code Start?</a></li>
+            <li><a href="#podras-aprender">Qué Podrás Aprender</a></li>
+            <li><a href="#lenguajes">Lenguajes Disponibles</a></li>
+            <li><a href="#audiencia">Para Quién es</a></li>
+            <li><a href="#por-que-aprender">Por Qué Aprender</a></li>
+            <li><a href="#objetivo">Objetivo</a></li>
+            <li><a href="#camino">Tu Camino</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <!-- Sección 1: ¿Qué es Code Start? -->
+        <section id="que-es">
+            <h2>¿Qué es Code Start?</h2>
+            
+            <p>Code Start es una página educativa enfocada en enseñar programación desde cero. Su objetivo principal es ayudar a estudiantes y personas interesadas a comprender los fundamentos de diferentes lenguajes de programación sin necesidad de tener experiencia previa.</p>
+
+            <p>En Code Start encontrarás un ambiente amigable, recursos claros y ejercicios prácticos que te permitirán aprender a tu propio ritmo. Creemos que la programación no debe ser complicada, y por eso nos dedicamos a simplificar los conceptos más difíciles.</p>
+
+            <p>Nuestro enfoque es progresivo: comenzamos con conceptos básicos y avanzamos gradualmente hacia temas más complejos, asegurándonos de que entiendas cada paso del camino.</p>
+
+            <div class="definition">
+                <strong>La Misión de Code Start</strong>
+                <p>Democratizar el acceso a la educación en programación, haciendo que sea accesible, comprensible y emocionante para todos, independientemente de su experiencia previa.</p>
+            </div>
+
+            <h3>Aquí podrás aprender lenguajes como:</h3>
+            <ul>
+                <li><strong>HTML:</strong> La estructura fundamental de todas las páginas web</li>
+                <li><strong>CSS:</strong> El arte de diseñar y estilizar páginas web</li>
+                <li><strong>JavaScript:</strong> Cómo agregar interactividad a tus sitios web</li>
+                <li><strong>Python:</strong> Programación versátil para automatización y análisis de datos</li>
+                <li><strong>Java:</strong> Programación orientada a objetos para aplicaciones empresariales</li>
+            </ul>
+
+            <p style="margin-top: 1rem;"><strong>Cada tema está organizado de forma progresiva,</strong> para que avances paso a paso sin confundirte. No saltaremos pasos importantes, y cada concepto que aprendas será la base para el siguiente.</p>
+        </section>
+
+        <!-- Sección 2: Qué Podrás Aprender -->
+        <section id="podras-aprender">
+            <h2>¿Qué Podrás Aprender?</h2>
+            
+            <p>En Code Start podrás desarrollar habilidades importantes que te servirán en tu carrera como programador y más allá. Nuestro programa está diseñado para ofrecerte una educación integral en programación.</p>
+
+            <h3>Habilidades Principales</h3>
+            <div class="skill-list">
+                <div class="skill-item">
+                    <strong>💡 Pensamiento Lógico</strong>
+                    <p>Aprende a razonar paso a paso y resolver problemas de forma estructurada.</p>
+                </div>
+                <div class="skill-item">
+                    <strong>🔧 Resolución de Problemas</strong>
+                    <p>Desarrolla la capacidad de analizar y encontrar soluciones eficientes.</p>
+                </div>
+                <div class="skill-item">
+                    <strong>🎨 Creatividad</strong>
+                    <p>Crea aplicaciones únicas y soluciones innovadoras a partir de lo que aprendas.</p>
+                </div>
+                <div class="skill-item">
+                    <strong>🌐 Entendimiento Web</strong>
+                    <p>Comprende cómo funcionan las páginas web desde la estructura hasta el diseño.</p>
+                </div>
+                <div class="skill-item">
+                    <strong>💻 Fundamentos de Programación</strong>
+                    <p>Domina conceptos esenciales que aplican a múltiples lenguajes.</p>
+                </div>
+                <div class="skill-item">
+                    <strong>🚀 Preparación Avanzada</strong>
+                    <p>Siéntete listo para aprender temas más complejos de programación.</p>
+                </div>
+            </div>
+
+            <h3>Temas que Cubrimos</h3>
+            <ul>
+                <li>Comprender cómo funcionan las páginas web</li>
+                <li>Crear tus propios diseños con estilos personalizados</li>
+                <li>Programar lógica básica y resolver problemas</li>
+                <li>Entender cómo funcionan diferentes lenguajes</li>
+                <li>Prepararte para aprender programación más avanzada</li>
+            </ul>
+
+            <p style="margin-top: 1rem;">Todo el contenido está explicado de manera clara, con <strong>ejemplos prácticos que puedes probar por tu cuenta.</strong> No solo leerás teoría, sino que tendrás la oportunidad de escribir código y ver los resultados inmediatamente.</p>
+        </section>
+
+        <!-- Sección 3: Lenguajes Disponibles -->
+        <section id="lenguajes">
+            <h2>Lenguajes Disponibles en Code Start</h2>
+            
+            <p>Ofrecemos un currículo completo que cubre los lenguajes más solicitados en la industria. Cada uno tiene su propósito específico, y aquí encontrarás guías detalladas para cada uno.</p>
+
+            <div class="language-grid">
+                <div class="language-card">
+                    <span class="language-icon">🌐</span>
+                    <h4>HTML</h4>
+                    <p>La base de todas las páginas web. Aprende a estructurar contenido de forma semántica y accesible.</p>
+                </div>
+
+                <div class="language-card">
+                    <span class="language-icon">🎨</span>
+                    <h4>CSS</h4>
+                    <p>Diseña páginas hermosas. Domina colores, tipografía, layouts y diseño responsivo.</p>
+                </div>
+
+                <div class="language-card">
+                    <span class="language-icon">✨</span>
+                    <h4>JavaScript</h4>
+                    <p>Haz tus sitios interactivos. Aprende a responder a eventos y crear experiencias dinámicas.</p>
+                </div>
+
+                <div class="language-card">
+                    <span class="language-icon">🐍</span>
+                    <h4>Python</h4>
+                    <p>El lenguaje más versátil. Ideal para automatización, análisis de datos e IA.</p>
+                </div>
+
+                <div class="language-card">
+                    <span class="language-icon">☕</span>
+                    <h4>Java</h4>
+                    <p>Programación empresarial. Aprende POO y crea aplicaciones escalables.</p>
+                </div>
+            </div>
+
+            <h3>¿Por Dónde Empezar?</h3>
+            <p>Te recomendamos comenzar con HTML y CSS si te interesa desarrollo web, o con Python si prefieres programación general. Cada uno abre puertas diferentes, pero todos son igualmente valiosos.</p>
+        </section>
+
+        <!-- Sección 4: Para Quién es Code Start -->
+        <section id="audiencia">
+            <h2>¿Para Quién es Code Start?</h2>
+            
+            <p>Code Start está pensada principalmente para personas que desean comenzar su viaje en la programación. No importa tu edad, experiencia o trasfondo, tenemos algo para ti.</p>
+
+            <div class="audience-grid">
+                <div class="audience-item">
+                    <strong>👨‍💻 Personas sin Experiencia</strong>
+                    Aquí comienza tu viaje
+                </div>
+                <div class="audience-item">
+                    <strong>🎓 Estudiantes</strong>
+                    Que están comenzando en tecnología
+                </div>
+                <div class="audience-item">
+                    <strong>🚀 Aprendices Autodidactas</strong>
+                    Que quieren aprender desde cero
+                </div>
+                <div class="audience-item">
+                    <strong>🌐 Cualquier Interesado</strong>
+                    En el mundo digital
+                </div>
+            </div>
+
+            <h3>Requisitos Previos</h3>
+            <div class="definition">
+                <strong>¡Buena noticia! No necesitas conocimientos previos.</strong>
+                <p>Solo necesitas:</p>
+                <ul style="margin-top: 0.5rem; margin-left: 1rem;">
+                    <li>Una computadora con navegador web</li>
+                    <li>Ganas de aprender</li>
+                    <li>Disposición para practicar</li>
+                    <li>Paciencia contigo mismo</li>
+                </ul>
+            </div>
+
+            <h3>Ideal Para</h3>
+            <ul>
+                <li><strong>Principiantes absolutos:</strong> Nunca has programado y quieres empezar</li>
+                <li><strong>Estudiantes curiosos:</strong> Quieres explorar la tecnología</li>
+                <li><strong>Personas en transición de carrera:</strong> Buscas cambiar de camino profesional</li>
+                <li><strong>Padres e educadores:</strong> Que quieren enseñar a los más jóvenes</li>
+                <li><strong>Desarrolladores junior:</strong> Que quieren reforzar sus bases</li>
+            </ul>
+        </section>
+
+        <!-- Sección 5: ¿Por Qué Aprender Programación? -->
+        <section id="por-que-aprender">
+            <h2>¿Por Qué Aprender Programación?</h2>
+            
+            <p>Aprender programación no es solo sobre conseguir un trabajo (aunque eso también es una ventaja). Es sobre desarrollar habilidades que te servirán en cualquier área de tu vida.</p>
+
+            <div class="benefit-card">
+                <h4>💡 Mejora tu Pensamiento Lógico</h4>
+                <p>La programación te enseña a descomponer problemas complejos en partes manejables y resolver cada una sistemáticamente.</p>
+            </div>
+
+            <div class="benefit-card">
+                <h4>🎯 Desarrolla Habilidades de Resolución de Problemas</h4>
+                <p>Aprenderás a analizar situaciones, identificar problemas y crear soluciones eficientes. Estas habilidades aplican a cualquier área.</p>
+            </div>
+
+            <div class="benefit-card">
+                <h4>🚀 Abre Puertas Profesionales</h4>
+                <p>La tecnología está en demanda. Los programadores tienen oportunidades laborales en casi cualquier industria.</p>
+            </div>
+
+            <div class="benefit-card">
+                <h4>🌍 Te Conecta con una Comunidad Global</h4>
+                <p>Formarás parte de una comunidad mundial de programadores que comparten conocimiento y se ayudan mutuamente.</p>
+            </div>
+
+            <div class="benefit-card">
+                <h4>💻 Crea Soluciones Reales</h4>
+                <p>Desde automatizar tareas hasta crear aplicaciones, puedes construir cosas que hagan una diferencia real.</p>
+            </div>
+
+            <div class="benefit-card">
+                <h4>📈 Mejora tu Creatividad</h4>
+                <p>La programación es un arte. Puedes expresar tu creatividad y crear soluciones innovadoras.</p>
+            </div>
+
+            <h3>La Verdad Sobre la Programación</h3>
+            <p>La programación no solo es para expertos o ingenieros. <strong>Cualquier persona puede aprenderla con práctica y dedicación.</strong> No es un talento innato, es una habilidad que se desarrolla.</p>
+
+            <p>Muchas de las personas más exitosas en tecnología comenzaron sin experiencia. Lo que las hace exitosas es su disposición a aprender y su persistencia. Si tú tienes eso, puedes hacerlo también.</p>
+        </section>
+
+        <!-- Sección 6: Objetivo de Code Start -->
+        <section id="objetivo">
+            <h2>Nuestro Objetivo</h2>
+            
+            <p>En Code Start, creemos que la educación en programación debe ser accesible para todos. Nuestro objetivo es simple pero ambicioso:</p>
+
+            <div class="definition">
+                <strong>Hacer que aprender programación sea más fácil, accesible y comprensible para todos.</strong>
+                <p>No importa si estás empezando desde cero, aquí encontrarás una guía clara para avanzar paso a paso hacia tus objetivos como programador.</p>
+            </div>
+
+            <h3>Nuestros Principios</h3>
+            <ul>
+                <li><strong>Claridad:</strong> Explicamos conceptos complejos de forma simple</li>
+                <li><strong>Accesibilidad:</strong> No hay barreras para aprender</li>
+                <li><strong>Práctica:</strong> Aprendes haciendo, no solo leyendo</li>
+                <li><strong>Progresividad:</strong> Avanzas a tu ritmo, paso a paso</li>
+                <li><strong>Comunidad:</strong> Todos estamos aquí para ayudarnos mutuamente</li>
+            </ul>
+
+            <h3>Lo Que Nos Hace Diferentes</h3>
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Aspecto</th>
+                        <th>Code Start</th>
+                        <th>Otros Recursos</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Nivel de entrada</td>
+                        <td>Completamente principiante</td>
+                        <td>Varía, a veces requiere conocimiento previo</td>
+                    </tr>
+                    <tr>
+                        <td>Claridad de explicaciones</td>
+                        <td>Muy clara y detallada</td>
+                        <td>A veces técnica y confusa</td>
+                    </tr>
+                    <tr>
+                        <td>Ejemplos prácticos</td>
+                        <td>Abundantes y funcionales</td>
+                        <td>Limitados o teóricos</td>
+                    </tr>
+                    <tr>
+                        <td>Velocidad de aprendizaje</td>
+                        <td>A tu propio ritmo</td>
+                        <td>Varía según el recurso</td>
+                    </tr>
+                    <tr>
+                        <td>Enfoque</td>
+                        <td>Desde cero hasta competencia</td>
+                        <td>A menudo enfocado en un nivel específico</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Sección 7: Tu Camino en la Programación -->
+        <section id="camino">
+            <h2>Tu Camino en la Programación Comienza Aquí</h2>
+            
+            <p>Sabemos que comenzar puede parecer abrumador, pero tenemos un plan claro para ayudarte a avanzar de forma estructurada. Aquí está tu mapa del camino:</p>
+
+            <div class="roadmap">
+                <div class="roadmap-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h4>Elige tu Primer Lenguaje</h4>
+                        <p>Si te interesa crear sitios web, comienza con HTML. Si prefieres programación general, elige Python. Cualquiera es un excelente punto de partida.</p>
+                    </div>
+                </div>
+
+                <div class="roadmap-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h4>Aprende los Fundamentos</h4>
+                        <p>Domina los conceptos básicos del lenguaje elegido. No tengas prisa; entiende cada concepto antes de pasar al siguiente.</p>
+                    </div>
+                </div>
+
+                <div class="roadmap-step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h4>Practica con Ejemplos</h4>
+                        <p>Escribe código. Modifica ejemplos. Experimenta. El aprendizaje se consolida haciendo, no solo leyendo.</p>
+                    </div>
+                </div>
+
+                <div class="roadmap-step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h4>Crea Tus Propios Proyectos</h4>
+                        <p>Una vez que te sientas cómodo, crea algo pequeño. Puede ser un sitio web, un script que automatice una tarea, o un pequeño programa.</p>
+                    </div>
+                </div>
+
+                <div class="roadmap-step">
+                    <div class="step-number">5</div>
+                    <div class="step-content">
+                        <h4>Expande tus Conocimientos</h4>
+                        <p>Ahora que tienes una base sólida, puedes aprender otros lenguajes, librerías y frameworks con mayor facilidad.</p>
+                    </div>
+                </div>
+
+                <div class="roadmap-step">
+                    <div class="step-number">6</div>
+                    <div class="step-content">
+                        <h4>Sigue Creciendo</h4>
+                        <p>La programación es un camino de aprendizaje continuo. Siempre hay algo nuevo que descubrir y mejorar.</p>
+                    </div>
+                </div>
+            </div>
+
+            <h3>Consejos para el Éxito</h3>
+            <ul>
+                <li><strong>Sé consistente:</strong> Practica un poco cada día es mejor que mucho una vez a la semana</li>
+                <li><strong>No tengas miedo de los errores:</strong> Los errores son parte del aprendizaje</li>
+                <li><strong>Tómate tu tiempo:</strong> No hay prisa. La calidad del aprendizaje es más importante que la velocidad</li>
+                <li><strong>Únete a comunidades:</strong> Aprende con otros, haz preguntas, ayuda a otros</li>
+                <li><strong>Crea proyectos personales:</strong> Aprende mejor cuando trabajas en algo que te apasiona</li>
+                <li><strong>Celebra tus logros:</strong> Cada paso adelante es un éxito</li>
+            </ul>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section">
+            <h3>¡Comienza Tu Viaje Ahora!</h3>
+            <p>No es necesario esperar más. Tu camino en la programación comienza hoy. Elige un lenguaje y da tu primer paso.</p>
+            <a href="index.html" class="cta-button">Explorar Guías Disponibles →</a>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Code Start. Todos los derechos reservados.</p>
+        <p>Dedicado a democratizar la educación en programación</p>
+        <p>Última actualización: Marzo 2026</p>
+    </footer>
+</body>
+</html>

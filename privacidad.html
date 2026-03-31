@@ -1,0 +1,956 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8428793459037062"
+     crossorigin="anonymous"></script>
+<meta name="google-adsense-account" content="ca-pub-8428793459037062">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Política de Privacidad - Code Start</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2rem 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        header h1 {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            font-size: 2.5rem;
+        }
+
+        nav {
+            background-color: #333;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav ul {
+            list-style: none;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+            font-size: 0.9rem;
+        }
+
+        nav a:hover {
+            background-color: #667eea;
+        }
+
+        main {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 20px;
+        }
+
+        section {
+            background: white;
+            margin-bottom: 2rem;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        section h2 {
+            color: #667eea;
+            margin-bottom: 1rem;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 0.5rem;
+        }
+
+        section h3 {
+            color: #764ba2;
+            margin-top: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        section h4 {
+            color: #764ba2;
+            margin-top: 1rem;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .definition {
+            background-color: #f0f4ff;
+            border-left: 4px solid #667eea;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 4px;
+        }
+
+        .definition strong {
+            color: #667eea;
+        }
+
+        ul, ol {
+            margin-left: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        .info-box {
+            background-color: #fff3cd;
+            border: 1px solid #ffc107;
+            border-left: 4px solid #ff9800;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 4px;
+        }
+
+        .info-box strong {
+            color: #ff6b00;
+        }
+
+        .security-box {
+            background-color: #d4edda;
+            border: 1px solid #28a745;
+            border-left: 4px solid #28a745;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 4px;
+        }
+
+        .security-box strong {
+            color: #155724;
+        }
+
+        .warning-box {
+            background-color: #f8d7da;
+            border: 1px solid #f5c6cb;
+            border-left: 4px solid #dc3545;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 4px;
+        }
+
+        .warning-box strong {
+            color: #721c24;
+        }
+
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+        }
+
+        .comparison-table th,
+        .comparison-table td {
+            border: 1px solid #ddd;
+            padding: 0.75rem;
+            text-align: left;
+        }
+
+        .comparison-table th {
+            background-color: #667eea;
+            color: white;
+        }
+
+        .comparison-table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .info-card {
+            background: #f8f9ff;
+            border-left: 4px solid #667eea;
+            padding: 1.5rem;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+        }
+
+        .info-card:hover {
+            transform: translateX(5px);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.2);
+        }
+
+        .info-card h4 {
+            color: #667eea;
+            margin-bottom: 0.5rem;
+        }
+
+        .info-card p {
+            color: #666;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        .table-section {
+            overflow-x: auto;
+        }
+
+        .rights-list {
+            list-style: none;
+            margin-left: 0;
+        }
+
+        .rights-list li {
+            padding: 0.75rem;
+            margin-bottom: 0.5rem;
+            background-color: #f0f4ff;
+            border-left: 4px solid #667eea;
+            border-radius: 4px;
+        }
+
+        .rights-list li:before {
+            content: "✓ ";
+            color: #667eea;
+            font-weight: bold;
+            margin-right: 0.5rem;
+        }
+
+        .contact-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        .contact-box h3 {
+            color: white;
+            margin-bottom: 1rem;
+        }
+
+        .contact-box p {
+            margin-bottom: 1rem;
+            font-size: 1rem;
+        }
+
+        .contact-email {
+            display: inline-block;
+            background: white;
+            color: #667eea;
+            padding: 0.75rem 1.5rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            margin-top: 1rem;
+        }
+
+        .contact-email:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+
+        footer p {
+            margin: 0.5rem 0;
+        }
+
+        /* Menú de Navegación Global */
+        .global-nav {
+            background-color: #222;
+            padding: 0.5rem 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            margin-bottom: 2rem;
+            border-radius: 8px;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .nav-logo {
+            color: white;
+            font-weight: bold;
+            text-decoration: none;
+            font-size: 1.1rem;
+            margin-right: 2rem;
+            transition: color 0.3s ease;
+        }
+
+        .nav-logo:hover {
+            color: #667eea;
+        }
+
+        .nav-menu {
+            list-style: none;
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .nav-link {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 0.75rem;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            font-size: 0.95rem;
+        }
+
+        .nav-link:hover {
+            background-color: #667eea;
+            color: white;
+            transform: scale(1.05);
+        }
+
+        .last-update {
+            background-color: #e8f4f8;
+            border-left: 4px solid #17a2b8;
+            padding: 1rem;
+            margin-bottom: 2rem;
+            border-radius: 4px;
+            font-size: 0.95rem;
+        }
+
+        .last-update strong {
+            color: #17a2b8;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8rem;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+
+            nav a {
+                font-size: 0.85rem;
+                padding: 0.4rem 0.8rem;
+            }
+
+            main {
+                padding: 0 15px;
+            }
+
+            section {
+                padding: 1.5rem;
+            }
+
+            .comparison-table {
+                font-size: 0.9rem;
+            }
+
+            .comparison-table th,
+            .comparison-table td {
+                padding: 0.5rem;
+            }
+
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .nav-container {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .nav-logo {
+                margin-right: 0;
+                margin-bottom: 0.5rem;
+            }
+
+            .nav-menu {
+                gap: 0.75rem;
+                justify-content: center;
+            }
+
+            .nav-link {
+                font-size: 0.85rem;
+                padding: 0.4rem 0.6rem;
+            }
+        }
+    </style>
+</head>
+<body>
+ <nav>
+        <a href="index.html">Inicio</a> |
+        <a href="html.html">HTML</a> |
+        <a href="css.html">CSS</a> |
+        <a href="java.html">Java</a> |
+        <a href="python.html">Python</a> |
+        <a href="privacidad.html">privacidad</a>
+    </nav>
+
+    <header>
+        <h1>🔒 Política de Privacidad - Code Start</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#introduccion">Introducción</a></li>
+            <li><a href="#informacion">Información</a></li>
+            <li><a href="#uso">Uso de Información</a></li>
+            <li><a href="#cookies">Cookies</a></li>
+            <li><a href="#publicidad">Publicidad</a></li>
+            <li><a href="#proteccion">Protección</a></li>
+            <li><a href="#enlaces">Enlaces Externos</a></li>
+            <li><a href="#cambios">Cambios</a></li>
+            <li><a href="#consentimiento">Consentimiento</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="last-update">
+            <strong>⏰ Última actualización:</strong> Marzo 2026. Esta política puede cambiar en cualquier momento. Te recomendamos revisarla periódicamente.
+        </div>
+
+        <!-- Sección 1: Introducción -->
+        <section id="introduccion">
+            <h2>1. Introducción</h2>
+            
+            <p>En Code Start, la privacidad de los usuarios es muy importante. Esta política explica qué información se recopila, cómo se utiliza y cómo se protege cuando visitas esta página web.</p>
+
+            <p>Code Start se compromete a mantener la transparencia en la recopilación y uso de datos. Queremos que tengas total confianza en nuestro sitio y entiendas exactamente qué sucede con tu información.</p>
+
+            <p>Esta Política de Privacidad es un documento legal que describe nuestras prácticas de privacidad. Te recomendamos leerla completamente.</p>
+
+            <div class="definition">
+                <strong>Importante</strong>
+                <p>Al utilizar este sitio, aceptas las prácticas descritas en esta Política de Privacidad. Si no estás de acuerdo con alguna parte, te pedimos que no utilices Code Start.</p>
+            </div>
+
+            <h3>¿Por Qué Tenemos Esta Política?</h3>
+            <ul>
+                <li>Para proteger tu privacidad</li>
+                <li>Para ser transparentes contigo</li>
+                <li>Para cumplir con regulaciones legales</li>
+                <li>Para establecer confianza mutua</li>
+            </ul>
+        </section>
+
+        <!-- Sección 2: Información que Recopilamos -->
+        <section id="informacion">
+            <h2>2. Información que Recopilamos</h2>
+            
+            <p>Code Start puede recopilar información de dos formas diferentes. Es importante que entiendas exactamente qué datos se recopilan y por qué.</p>
+
+            <h3>A. Información Proporcionada por el Usuario</h3>
+            <p>Esta es la información que tú voluntariamente nos proporcionas:</p>
+
+            <div class="info-grid">
+                <div class="info-card">
+                    <h4>📝 Nombre</h4>
+                    <p>Se puede solicitar en formularios específicos si deseas participar en concursos, suscripciones o comentarios.</p>
+                </div>
+
+                <div class="info-card">
+                    <h4>📧 Email</h4>
+                    <p>Si deseas recibir actualizaciones o newsletters sobre nuevos contenidos.</p>
+                </div>
+
+                <div class="info-card">
+                    <h4>💬 Comentarios</h4>
+                    <p>Datos que ingreses voluntariamente en formularios, comentarios o secciones interactivas.</p>
+                </div>
+
+                <div class="info-card">
+                    <h4>📱 Información de Contacto</h4>
+                    <p>Información que nos compartas si deseas comunicarte con nosotros.</p>
+                </div>
+            </div>
+
+            <h3>B. Información Automática</h3>
+            <p>Esta información se recopila automáticamente cuando navegas por el sitio sin que tengas que hacer nada:</p>
+
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Tipo de Dato</th>
+                        <th>Descripción</th>
+                        <th>Propósito</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Dirección IP</td>
+                        <td>Tu identificador único en Internet</td>
+                        <td>Analizar ubicación aproximada y seguridad</td>
+                    </tr>
+                    <tr>
+                        <td>Tipo de Navegador</td>
+                        <td>Chrome, Firefox, Safari, etc.</td>
+                        <td>Optimizar compatibilidad del sitio</td>
+                    </tr>
+                    <tr>
+                        <td>Tiempo de Visita</td>
+                        <td>Cuándo accedes al sitio</td>
+                        <td>Entender patrones de uso</td>
+                    </tr>
+                    <tr>
+                        <td>Páginas Visitadas</td>
+                        <td>Qué contenido ves</td>
+                        <td>Mejorar el sitio basado en uso</td>
+                    </tr>
+                    <tr>
+                        <td>Duración de Sesión</td>
+                        <td>Cuánto tiempo pasas aquí</td>
+                        <td>Medir engagement</td>
+                    </tr>
+                    <tr>
+                        <td>Referrer</td>
+                        <td>De dónde vienes</td>
+                        <td>Analizar fuentes de tráfico</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="info-box">
+                <strong>⚠️ Nota Importante:</strong> Esta información se utiliza únicamente para mejorar la experiencia del usuario. No se utiliza para identificarte personalmente sin tu consentimiento.
+            </div>
+
+            <h3>Información que NO Recopilamos</h3>
+            <ul>
+                <li>❌ Contraseñas (a menos que inicies sesión en una función especial)</li>
+                <li>❌ Datos financieros o de tarjetas de crédito</li>
+                <li>❌ Información biométrica</li>
+                <li>❌ Datos sensibles sin consentimiento explícito</li>
+            </ul>
+        </section>
+
+        <!-- Sección 3: Uso de la Información -->
+        <section id="uso">
+            <h2>3. Uso de la Información</h2>
+            
+            <p>La información recopilada puede utilizarse para varios propósitos, todos enfocados en mejorar tu experiencia en Code Start.</p>
+
+            <h3>Usos Permitidos</h3>
+            <ul>
+                <li><strong>Mejorar el contenido:</strong> Entender qué temas te interesan más</li>
+                <li><strong>Analizar comportamiento:</strong> Ver cómo navegas el sitio</li>
+                <li><strong>Optimizar funcionamiento:</strong> Hacer el sitio más rápido y eficiente</li>
+                <li><strong>Personalizar contenido:</strong> Mostrarte recursos relevantes</li>
+                <li><strong>Seguridad:</strong> Detectar y prevenir abuso o actividad maliciosa</li>
+                <li><strong>Comunicación:</strong> Responder a tus consultas si nos contactas</li>
+            </ul>
+
+            <h3>Política de Compartición de Datos</h3>
+            <div class="definition">
+                <strong>Protección Garantizada</strong>
+                <p><strong>Code Start no vende, intercambia ni comparte información personal con terceros sin tu consentimiento explícito.</strong></p>
+            </div>
+
+            <p>Tu información es tuya. Bajo ninguna circunstancia venderemos tu lista de contactos, tus hábitos de navegación o cualquier dato personal a empresas de publicidad o marketing.</p>
+
+            <h3>Excepciones Legales</h3>
+            <p>Podemos compartir información si:</p>
+            <ul>
+                <li>Lo requiere una orden legal o regulación gubernamental</li>
+                <li>Es necesario para prevenir fraude o delitos</li>
+                <li>Tenemos tu consentimiento explícito</li>
+            </ul>
+
+            <div class="warning-box">
+                <strong>⚖️ Nota Legal:</strong> Code Start puede cooperar con autoridades legales si se requiere legalmente, pero solo con la información específicamente solicitada.
+            </div>
+        </section>
+
+        <!-- Sección 4: Uso de Cookies -->
+        <section id="cookies">
+            <h2>4. Uso de Cookies</h2>
+            
+            <p>Este sitio puede utilizar cookies para mejorar tu experiencia. Las cookies son pequeños archivos (no programas maliciosos) que se almacenan en tu dispositivo.</p>
+
+            <h3>¿Qué es una Cookie?</h3>
+            <div class="definition">
+                <strong>Definición</strong>
+                <p>Una cookie es un pequeño archivo de texto que un sitio web almacena en tu navegador. Cuando vuelves al sitio, tu navegador envía la cookie de vuelta, permitiendo que el sitio te reconozca.</p>
+            </div>
+
+            <h3>Tipos de Cookies que Usamos</h3>
+
+            <div class="info-grid">
+                <div class="info-card">
+                    <h4>🔒 Cookies Esenciales</h4>
+                    <p>Necesarias para que el sitio funcione correctamente. No se pueden desactivar.</p>
+                </div>
+
+                <div class="info-card">
+                    <h4>📊 Cookies de Análisis</h4>
+                    <p>Nos ayudan a entender cómo usan los usuarios el sitio.</p>
+                </div>
+
+                <div class="info-card">
+                    <h4>🎯 Cookies de Preferencias</h4>
+                    <p>Recuerdan tus preferencias y configuración.</p>
+                </div>
+
+                <div class="info-card">
+                    <h4>📢 Cookies de Publicidad</h4>
+                    <p>Usadas para mostrar anuncios relevantes (si utilizamos Google AdSense).</p>
+                </div>
+            </div>
+
+            <h3>Beneficios de las Cookies</h3>
+            <ul>
+                <li>✓ Recordar preferencias del usuario</li>
+                <li>✓ Analizar el tráfico del sitio</li>
+                <li>✓ Personalizar contenido</li>
+                <li>✓ Mejorar la velocidad del sitio</li>
+                <li>✓ Recordar tu idioma preferido</li>
+            </ul>
+
+            <h3>Controlar Cookies</h3>
+            <p>El usuario puede desactivar las cookies desde su navegador si lo desea. Aquí te mostramos cómo:</p>
+
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Navegador</th>
+                        <th>Instrucciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Chrome</td>
+                        <td>Configuración → Privacidad y seguridad → Cookies y otros datos de sitios</td>
+                    </tr>
+                    <tr>
+                        <td>Firefox</td>
+                        <td>Opciones → Privacidad → Cookies y datos de sitios</td>
+                    </tr>
+                    <tr>
+                        <td>Safari</td>
+                        <td>Preferencias → Privacidad → Cookies y datos de sitios web</td>
+                    </tr>
+                    <tr>
+                        <td>Edge</td>
+                        <td>Configuración → Privacidad → Cookies y otros datos de sitios</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="info-box">
+                <strong>⚠️ Importante:</strong> Desactivar cookies puede afectar la funcionalidad de algunos elementos del sitio. Recomendamos mantenerlas activadas para una mejor experiencia.
+            </div>
+        </section>
+
+        <!-- Sección 5: Publicidad -->
+        <section id="publicidad">
+            <h2>5. Publicidad (Google AdSense)</h2>
+            
+            <p>Code Start puede utilizar servicios de publicidad como Google AdSense para mostrar anuncios relevantes. Esto nos ayuda a mantener el sitio gratuito para todos.</p>
+
+            <h3>Cómo Funciona Google AdSense</h3>
+            <p>Google AdSense usa cookies y tecnología de seguimiento para:</p>
+            <ul>
+                <li>Entender tus intereses basados en sitios que visitas</li>
+                <li>Mostrar anuncios relacionados con esos intereses</li>
+                <li>Medir la efectividad de los anuncios</li>
+            </ul>
+
+            <h3>Información que Google Puede Recopilar</h3>
+            <div class="info-grid">
+                <div class="info-card">
+                    <h4>📱 Historial de Navegación</h4>
+                    <p>Qué sitios visitas y cuándo</p>
+                </div>
+
+                <div class="info-card">
+                    <h4>🎯 Intereses</h4>
+                    <p>Categorías de contenido que te interesan</p>
+                </div>
+
+                <div class="info-card">
+                    <h4>🔍 Búsquedas</h4>
+                    <p>Términos que buscas en Google</p>
+                </div>
+
+                <div class="info-card">
+                    <h4>📍 Ubicación Aproximada</h4>
+                    <p>País/región para anuncios locales</p>
+                </div>
+            </div>
+
+            <h3>Controlar la Publicidad Personalizada</h3>
+            <p>Puedes controlar cómo Google utiliza tu información:</p>
+            <ul>
+                <li>Visita <strong>myaccount.google.com</strong> y accede a tu cuenta</li>
+                <li>Ve a "Datos y privacidad"</li>
+                <li>Busca "Personalización de anuncios"</li>
+                <li>Desactívala si lo deseas</li>
+            </ul>
+
+            <div class="info-box">
+                <strong>ℹ️ Nota:</strong> Desactivar la personalización de anuncios no significa que no verás anuncios, solo que no serán personalizados basados en tus intereses.
+            </div>
+
+            <h3>Política de Google</h3>
+            <p>Para obtener más información sobre cómo Google recopila y utiliza datos, consulta:</p>
+            <ul>
+                <li><strong>Política de Privacidad de Google:</strong> policies.google.com/privacy</li>
+                <li><strong>Cómo usa Google la información:</strong> policies.google.com/technologies/partner-sites</li>
+            </ul>
+        </section>
+
+        <!-- Sección 6: Protección de Información -->
+        <section id="proteccion">
+            <h2>6. Protección de la Información</h2>
+            
+            <p>Code Start se compromete a proteger la información de los usuarios mediante medidas básicas de seguridad. Sin embargo, es importante que entiendas que ningún sistema en internet es completamente seguro.</p>
+
+            <h3>Medidas de Seguridad Implementadas</h3>
+
+            <div class="security-box">
+                <h4>🔐 Encriptación</h4>
+                <p>Los datos se transmiten a través de conexiones seguras (HTTPS) cuando es necesario.</p>
+            </div>
+
+            <div class="security-box">
+                <h4>🛡️ Protección de Servidores</h4>
+                <p>Los servidores están protegidos con firewalls y sistemas de seguridad.</p>
+            </div>
+
+            <div class="security-box">
+                <h4>🔑 Control de Acceso</h4>
+                <p>Solo personal autorizado puede acceder a datos sensibles.</p>
+            </div>
+
+            <div class="security-box">
+                <h4>📊 Monitoreo</h4>
+                <p>Monitoreamos constantemente el sitio para detectar actividad maliciosa.</p>
+            </div>
+
+            <h3>Limitaciones de Seguridad</h3>
+            <div class="warning-box">
+                <strong>⚠️ Descargo de Responsabilidad:</strong> No podemos garantizar seguridad absoluta. Internet es inherentemente un medio público, y los datos pueden ser interceptados por terceros a pesar de nuestros mejores esfuerzos.
+            </div>
+
+            <h3>Tu Responsabilidad</h3>
+            <p>Para ayudarnos a proteger tu información:</p>
+            <ul>
+                <li>Usa contraseñas fuertes</li>
+                <li>No compartas tu información personal en comentarios públicos</li>
+                <li>Mantén tu dispositivo y navegador actualizados</li>
+                <li>Ten cuidado con enlaces sospechosos</li>
+            </ul>
+
+            <h3>Retención de Datos</h3>
+            <p>Code Start retiene datos solo mientras sea necesario para los propósitos establecidos. Una vez que ya no son necesarios, se eliminan de forma segura.</p>
+        </section>
+
+        <!-- Sección 7: Enlaces Externos -->
+        <section id="enlaces">
+            <h2>7. Enlaces a Sitios Externos</h2>
+            
+            <p>Este sitio puede contener enlaces a otras páginas web. Code Start no es responsable de las políticas de privacidad ni del contenido de dichos sitios externos.</p>
+
+            <h3>Aviso Importante</h3>
+            <div class="warning-box">
+                <strong>⚠️ Responsabilidad Limitada</strong>
+                <p>Aunque verificamos los enlaces, Code Start no controla ni es responsable de:</p>
+                <ul style="margin-top: 0.5rem; margin-left: 1rem;">
+                    <li>El contenido de sitios externos</li>
+                    <li>Las políticas de privacidad de terceros</li>
+                    <li>La disponibilidad de esos sitios</li>
+                    <li>Virus o malware en sitios externos</li>
+                </ul>
+            </div>
+
+            <h3>Recomendaciones</h3>
+            <ul>
+                <li>✓ Revisa la política de privacidad de cada sitio que visites</li>
+                <li>✓ Ten cuidado con la información que compartes en sitios desconocidos</li>
+                <li>✓ Verifica URLs antes de hacer clic</li>
+                <li>✓ Usa tu sentido común en internet</li>
+            </ul>
+
+            <h3>Sitios Confiables</h3>
+            <p>Code Start recomienda visitar solo sitios que:</p>
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Indicador</th>
+                        <th>Descripción</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>🔒 HTTPS</td>
+                        <td>Tiene conexión segura (URL comienza con https://)</td>
+                    </tr>
+                    <tr>
+                        <td>📋 Política Clara</td>
+                        <td>Tiene política de privacidad visible</td>
+                    </tr>
+                    <tr>
+                        <td>👥 Reputación</td>
+                        <td>Es un sitio conocido y confiable</td>
+                    </tr>
+                    <tr>
+                        <td>📞 Contacto</td>
+                        <td>Tiene información de contacto clara</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Sección 8: Cambios en la Política -->
+        <section id="cambios">
+            <h2>8. Cambios en la Política</h2>
+            
+            <p>Code Start se reserva el derecho de modificar esta Política de Privacidad en cualquier momento. Los cambios pueden ser necesarios para cumplir con nuevas regulaciones o mejorar nuestras prácticas.</p>
+
+            <h3>Cómo Se Notifican los Cambios</h3>
+            <ul>
+                <li><strong>En esta misma página:</strong> Los cambios se publicarán aquí primero</li>
+                <li><strong>Fecha de actualización:</strong> Verás la fecha en la parte superior</li>
+                <li><strong>Resaltados:</strong> Los cambios importantes se marcan claramente</li>
+                <li><strong>Notificación por email:</strong> Para cambios significativos (si has compartido tu email)</li>
+            </ul>
+
+            <h3>Tu Responsabilidad</h3>
+            <p><strong>Se recomienda revisar esta sección periódicamente</strong> para estar al tanto de cualquier cambio. Si continúas usando Code Start después de cambios importantes, aceptas la política actualizada.</p>
+
+            <div class="info-box">
+                <strong>📌 Consejo:</strong> Marca esta página con un marcador o suscríbete para recibir notificaciones cuando se actualice.
+            </div>
+
+            <h3>Historial de Cambios</h3>
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Fecha</th>
+                        <th>Cambio</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Marzo 2026</td>
+                        <td>Política inicial creada</td>
+                    </tr>
+                    <tr>
+                        <td>Pendiente</td>
+                        <td>Más actualizaciones por venir</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Sección 9: Consentimiento -->
+        <section id="consentimiento">
+            <h2>9. Consentimiento y Tus Derechos</h2>
+            
+            <p>Al utilizar este sitio web, aceptas esta Política de Privacidad y sus términos. Esto incluye la recopilación y uso de información como se describe anteriormente.</p>
+
+            <h3>Tu Consentimiento Implica Que Entiendes</h3>
+            <ul class="rights-list">
+                <li>Code Start recopila ciertos datos cuando visitas</li>
+                <li>Usamos cookies y tecnología de seguimiento</li>
+                <li>Google puede mostrar anuncios personalizados</li>
+                <li>No somos responsables de sitios externos</li>
+                <li>Podemos cambiar esta política cuando sea necesario</li>
+            </ul>
+
+            <h3>Tus Derechos</h3>
+            <p>Tienes derecho a:</p>
+            <ul class="rights-list">
+                <li>Saber qué datos recopilamos sobre ti</li>
+                <li>Solicitar una copia de tus datos</li>
+                <li>Solicitar la corrección de datos incorrectos</li>
+                <li>Solicitar la eliminación de datos (derecho al olvido)</li>
+                <li>Optar por no participar en ciertos servicios</li>
+            </ul>
+
+            <h3>¿Qué Pasa Si No Aceptas?</h3>
+            <div class="warning-box">
+                <strong>⚠️ Opción de Rechazo</strong>
+                <p>Si no estás de acuerdo con esta política, tienes el derecho de no usar Code Start. Sin embargo, algunos navegadores pueden requerir consentimiento para funcionar plenamente.</p>
+            </div>
+
+            <h3>Consentimiento para Menores</h3>
+            <p>Si eres menor de 13 años:</p>
+            <ul>
+                <li>Solicita permiso a tus padres o tutores antes de usar Code Start</li>
+                <li>No compartas información personal sin supervisión</li>
+                <li>Comunica cualquier inquietud a un adulto de confianza</li>
+            </ul>
+
+            <div class="security-box">
+                <h4>🛡️ Protección de Menores</h4>
+                <p>Code Start no recopila información de menores sin consentimiento parental. Si tenemos conocimiento de que un menor ha proporcionado información sin permiso, tomaremos medidas para eliminarlo.</p>
+            </div>
+        </section>
+
+        <!-- Sección de Contacto -->
+        <section>
+            <div class="contact-box">
+                <h3>¿Preguntas Sobre Tu Privacidad?</h3>
+                <p>Si tienes dudas sobre esta Política de Privacidad o cómo Code Start maneja tu información, no dudes en contactarnos.</p>
+                <p>Estamos aquí para ayudarte y responder cualquier pregunta que tengas.</p>
+                <a href="mailto:privacy@codestart.com" class="contact-email">Enviar Consulta de Privacidad</a>
+            </div>
+        </section>
+
+        <!-- Sección Final de Consentimiento -->
+        <section>
+            <h2>Confirmación de Lectura</h2>
+            <div class="definition">
+                <strong>✓ He Leído y Entiendo</strong>
+                <p>Al continuar usando Code Start, confirmo que:</p>
+                <ul style="margin-top: 0.5rem; margin-left: 1rem;">
+                    <li>He leído esta Política de Privacidad completamente</li>
+                    <li>Entiendo cómo se recopila y usa mi información</li>
+                    <li>Acepto el uso de cookies y tecnología de seguimiento</li>
+                    <li>Acepto que Google puede mostrar anuncios personalizados</li>
+                    <li>Entiendo que Code Start no es responsable de sitios externos</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Code Start. Todos los derechos reservados.</p>
+        <p>Política de Privacidad - Última actualización: Marzo 2026</p>
+        <p>Para otras políticas, visita nuestra página de inicio</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8428793459037062"
+     crossorigin="anonymous"></script>
+<meta name="google-adsense-account" content="ca-pub-8428793459037062">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guía Completa de HTML - Estructura de Páginas Web</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2rem 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        header h1 {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            font-size: 2.5rem;
+        }
+
+        nav {
+            background-color: #333;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav ul {
+            list-style: none;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: #667eea;
+        }
+
+        main {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 20px;
+        }
+
+        section {
+            background: white;
+            margin-bottom: 2rem;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        section h2 {
+            color: #667eea;
+            margin-bottom: 1rem;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 0.5rem;
+        }
+
+        section h3 {
+            color: #764ba2;
+            margin-top: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .definition {
+            background-color: #f0f4ff;
+            border-left: 4px solid #667eea;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 4px;
+        }
+
+        .definition strong {
+            color: #667eea;
+        }
+
+        pre {
+            background-color: #282c34;
+            color: #abb2bf;
+            padding: 1.5rem;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin: 1rem 0;
+            font-family: 'Courier New', monospace;
+            line-height: 1.5;
+        }
+
+        code {
+            font-family: 'Courier New', monospace;
+            background-color: #f0f0f0;
+            padding: 0.2rem 0.4rem;
+            border-radius: 3px;
+            color: #d63384;
+        }
+
+        pre code {
+            background-color: transparent;
+            color: #abb2bf;
+            padding: 0;
+        }
+
+        ul, ol {
+            margin-left: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        .example-box {
+            background-color: #fffbea;
+            border: 1px solid #ffd700;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 4px;
+        }
+
+        .example-box strong {
+            color: #ff6b00;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+
+        footer p {
+            margin: 0.5rem 0;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8rem;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+
+            main {
+                padding: 0 15px;
+            }
+
+            section {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+ <nav>
+        <a href="index.html">Inicio</a> |
+        <a href="html.html">HTML</a> |
+        <a href="css.html">CSS</a> |
+        <a href="java.html">Java</a> |
+        <a href="python.html">Python</a> |
+        <a href="privacidad.html">privacidad</a>
+    </nav>
+    <header>
+        <h1>📚 Guía Completa de HTML</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#estructura">Estructura</a></li>
+            <li><a href="#etiquetas">Etiquetas</a></li>
+            <li><a href="#atributos">Atributos</a></li>
+            <li><a href="#jerarquia">Jerarquía DOM</a></li>
+            <li><a href="#semantica">Semántica</a></li>
+            <li><a href="#programacion">No es Programación</a></li>
+            <li><a href="#w3c">W3C</a></li>
+            <li><a href="#frontend">CSS y JavaScript</a></li>
+            <li><a href="#etiquetas-comunes">Etiquetas Comunes</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <!-- Sección 1: Estructura de Páginas Web -->
+        <section id="estructura">
+            <h2>1. Estructura de Páginas Web</h2>
+            
+            <p>HTML (HyperText Markup Language) es el lenguaje fundamental para crear la estructura de cualquier página web. Imagina que estás construyendo una casa: HTML serían los cimientos, las paredes, el techo, las habitaciones; es decir, los elementos básicos que le dan forma y organización al contenido. Cada página web que visitas está construida utilizando HTML para definir dónde va el título, dónde se colocan los párrafos, dónde se insertan las imágenes, y cómo se organizan los diferentes bloques de información.</p>
+
+            <div class="definition">
+                <strong>Definición: Página Web</strong>
+                <p>Una <strong>página web</strong> es un documento electrónico que puede contener texto, imágenes, enlaces, videos y otros elementos multimedia, accesible a través de Internet mediante un navegador web.</p>
+            </div>
+
+            <h3>Detalles y Ejemplos</h3>
+            <p>HTML utiliza un sistema de <strong>etiquetas</strong> para marcar los diferentes componentes de una página. Por ejemplo, un título principal se marca con <code>&lt;h1&gt;</code>, un párrafo con <code>&lt;p&gt;</code>, y una lista con <code>&lt;ul&gt;</code> (para listas desordenadas) o <code>&lt;ol&gt;</code> (para listas ordenadas).</p>
+
+            <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="es"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Estructura Básica&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;!-- Este es el contenido principal de la página --&gt;
+    &lt;h1&gt;Bienvenido a Mi Sitio Web&lt;/h1&gt;
+    &lt;p&gt;Este es el primer párrafo de introducción. Aquí explicamos de qué trata la página.&lt;/p&gt;
+    
+    &lt;h2&gt;Sección de Contenido&lt;/h2&gt;
+    &lt;p&gt;En esta sección, presentamos información más detallada.&lt;/p&gt;
+    &lt;ul&gt;
+        &lt;li&gt;Elemento de lista 1&lt;/li&gt;
+        &lt;li&gt;Elemento de lista 2&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+            <p>En este ejemplo, <code>&lt;h1&gt;</code> define el título principal, <code>&lt;p&gt;</code> define párrafos, <code>&lt;h2&gt;</code> define un subtítulo, y <code>&lt;ul&gt;</code> con <code>&lt;li&gt;</code> crea una lista con viñetas. Todo esto contribuye a la estructura general y la legibilidad de la página para el usuario y para los motores de búsqueda.</p>
+        </section>
+
+        <!-- Sección 2: Uso de Etiquetas -->
+        <section id="etiquetas">
+            <h2>2. Uso de Etiquetas (Elementos)</h2>
+            
+            <p>Las etiquetas son los bloques de construcción fundamentales de HTML. Son palabras clave encerradas entre corchetes angulares (&lt; y &gt;). La mayoría de las etiquetas vienen en pares: una etiqueta de apertura y una etiqueta de cierre. El contenido que se quiere marcar se coloca entre estas dos etiquetas. El conjunto de la etiqueta de apertura, el contenido y la etiqueta de cierre se conoce como un <strong>elemento HTML</strong>.</p>
+
+            <div class="definition">
+                <strong>Definición: Elemento HTML</strong>
+                <p>Un <strong>elemento HTML</strong> es un componente individual de una página web, definido por una etiqueta de apertura, contenido y una etiqueta de cierre (o en algunos casos, solo una etiqueta de apertura si es un elemento vacío).</p>
+            </div>
+
+            <h3>Detalles y Ejemplos</h3>
+            <ul>
+                <li><strong>Elementos de Bloque:</strong> Ocupan todo el ancho disponible y comienzan en una nueva línea (ej. <code>&lt;div&gt;</code>, <code>&lt;p&gt;</code>, <code>&lt;h1&gt;</code>, <code>&lt;ul&gt;</code>).</li>
+                <li><strong>Elementos en Línea:</strong> Ocupan solo el ancho necesario y no comienzan en una nueva línea (ej. <code>&lt;span&gt;</code>, <code>&lt;a&gt;</code>, <code>&lt;strong&gt;</code>, <code>&lt;em&gt;</code>).</li>
+                <li><strong>Elementos Vacíos:</strong> No tienen contenido y solo consisten en una etiqueta de apertura (ej. <code>&lt;img&gt;</code>, <code>&lt;br&gt;</code>, <code>&lt;hr&gt;</code>, <code>&lt;input&gt;</code>).</li>
+            </ul>
+
+            <pre><code>&lt;!-- Ejemplo de un elemento de bloque (párrafo) --&gt;
+&lt;p&gt;Este es un párrafo de texto.&lt;/p&gt;
+
+&lt;!-- Ejemplo de un elemento en línea (enlace) --&gt;
+Visita &lt;a href="https://www.ejemplo.com"&gt;nuestro sitio&lt;/a&gt; para más información.
+
+&lt;!-- Ejemplo de un elemento vacío (salto de línea) --&gt;
+Línea uno.&lt;br&gt;Línea dos.
+
+&lt;!-- Ejemplo de imagen (elemento vacío) --&gt;
+&lt;img src="ruta/a/tu/imagen.jpg" alt="Descripción de la imagen"&gt;</code></pre>
+
+            <p>La correcta utilización de las etiquetas es crucial para que el navegador interprete el contenido de la página de manera adecuada y para que los motores de búsqueda entiendan la estructura y el propósito de cada parte.</p>
+        </section>
+
+        <!-- Sección 3: Atributos -->
+        <section id="atributos">
+            <h2>3. Atributos para Información Adicional</h2>
+            
+            <p>Los atributos proporcionan información extra o modifican el comportamiento de los elementos HTML. Se especifican dentro de la <strong>etiqueta de apertura</strong> y generalmente vienen en pares de <code>nombre="valor"</code>. Los atributos son esenciales para personalizar y dar funcionalidad a los elementos.</p>
+
+            <div class="definition">
+                <strong>Definición: Atributo HTML</strong>
+                <p>Un <strong>atributo HTML</strong> es una propiedad adicional que se puede aplicar a un elemento HTML para modificar su comportamiento, apariencia o proporcionar metadatos.</p>
+            </div>
+
+            <h3>Atributos Comunes y su Uso</h3>
+
+            <h4 style="color: #764ba2; margin-top: 1rem;">href (en &lt;a&gt;)</h4>
+            <p>Define la URL de destino de un enlace.</p>
+            <pre><code>&lt;a href="https://www.wikipedia.org"&gt;Ir a Wikipedia&lt;/a&gt;</code></pre>
+
+            <h4 style="color: #764ba2; margin-top: 1rem;">src (en &lt;img&gt;)</h4>
+            <p>Especifica la ruta (URL o ruta de archivo) de la imagen a mostrar.</p>
+            <pre><code>&lt;img src="imagenes/logo.png" alt="Logo de la empresa"&gt;</code></pre>
+
+            <h4 style="color: #764ba2; margin-top: 1rem;">alt (en &lt;img&gt;)</h4>
+            <p>Proporciona un texto alternativo para la imagen. Es vital para la accesibilidad (lectores de pantalla) y si la imagen no se puede cargar.</p>
+            <pre><code>&lt;img src="gato.jpg" alt="Un gato atigrado durmiendo"&gt;</code></pre>
+
+            <h4 style="color: #764ba2; margin-top: 1rem;">id</h4>
+            <p>Identifica un elemento de forma única en la página. Útil para aplicar estilos CSS específicos o para ser manipulado por JavaScript.</p>
+            <pre><code>&lt;div id="seccion-principal"&gt;Contenido importante&lt;/div&gt;</code></pre>
+
+            <h4 style="color: #764ba2; margin-top: 1rem;">class</h4>
+            <p>Permite agrupar varios elementos que comparten características. Se puede aplicar el mismo class a múltiples elementos. Muy usado para CSS y JavaScript.</p>
+            <pre><code>&lt;p class="destacado"&gt;Este texto es importante.&lt;/p&gt;
+&lt;span class="destacado"&gt;Otro texto destacado.&lt;/span&gt;</code></pre>
+
+            <h4 style="color: #764ba2; margin-top: 1rem;">style</h4>
+            <p>Permite aplicar estilos CSS directamente al elemento (CSS en línea). Aunque útil para ejemplos rápidos, generalmente se prefiere usar archivos CSS externos para mantener el código organizado.</p>
+            <pre><code>&lt;p style="color: blue; font-size: 16px;"&gt;Texto azul de 16px.&lt;/p&gt;</code></pre>
+
+            <p style="margin-top: 1rem;">Los atributos hacen que los elementos HTML sean mucho más potentes y adaptables a las necesidades del diseño y la funcionalidad web.</p>
+        </section>
+
+        <!-- Sección 4: Jerarquía DOM -->
+        <section id="jerarquia">
+            <h2>4. Jerarquía de Elementos (Árbol DOM)</h2>
+            
+            <p>Los elementos HTML en una página no están simplemente uno al lado del otro; están anidados unos dentro de otros, formando una estructura jerárquica. Esta estructura se conoce como el <strong>Árbol de Documento de Objeto</strong> (DOM - Document Object Model). El navegador interpreta esta jerarquía para entender la relación entre los elementos.</p>
+
+            <div class="definition">
+                <strong>Definición: DOM (Document Object Model)</strong>
+                <p>El <strong>DOM</strong> es una representación en memoria de un documento HTML o XML, estructurada como un árbol de nodos (elementos, atributos, texto). Permite a los lenguajes de scripting (como JavaScript) acceder y manipular el contenido, la estructura y el estilo del documento.</p>
+            </div>
+
+            <h3>Estructura Jerárquica</h3>
+            <p>En el árbol DOM:</p>
+            <ul>
+                <li>El elemento raíz es <code>&lt;html&gt;</code>.</li>
+                <li>Los elementos dentro de <code>&lt;html&gt;</code> son head y body.</li>
+                <li>Los elementos dentro de body pueden ser otros elementos (<code>&lt;h1&gt;</code>, <code>&lt;p&gt;</code>, <code>&lt;div&gt;</code>, etc.).</li>
+                <li>Los elementos pueden contener otros elementos (elementos "padre" y "hijo") o texto.</li>
+            </ul>
+
+            <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt; &lt;!-- Nodo Raíz --&gt;
+  &lt;head&gt; &lt;!-- Nodo Hijo de html --&gt;
+    &lt;title&gt;Ejemplo DOM&lt;/title&gt; &lt;!-- Nodo Hijo de head --&gt;
+  &lt;/head&gt;
+  &lt;body&gt; &lt;!-- Nodo Hijo de html --&gt;
+    &lt;h1&gt;Título Principal&lt;/h1&gt; &lt;!-- Nodo Hijo de body --&gt;
+    &lt;p&gt; &lt;!-- Nodo Hijo de body --&gt;
+      Este es un párrafo con un &lt;span&gt;elemento en línea&lt;/span&gt;. &lt;!-- span es hijo de p --&gt;
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+            <h3>Relaciones en el Árbol</h3>
+            <ul>
+                <li><code>&lt;html&gt;</code> es el padre de <code>&lt;head&gt;</code> y <code>&lt;body&gt;</code>.</li>
+                <li><code>&lt;head&gt;</code> es el padre de <code>&lt;title&gt;</code>.</li>
+                <li><code>&lt;body&gt;</code> es el padre de <code>&lt;h1&gt;</code> y <code>&lt;p&gt;</code>.</li>
+                <li><code>&lt;p&gt;</code> es el padre de un nodo de texto y del elemento <code>&lt;span&gt;</code>.</li>
+                <li><code>&lt;span&gt;</code> es el padre de un nodo de texto.</li>
+            </ul>
+
+            <p>Comprender esta jerarquía es fundamental para aplicar estilos CSS de manera efectiva (por ejemplo, aplicar un estilo a todos los <code>&lt;li&gt;</code> dentro de un <code>&lt;ul&gt;</code> específico) y para manipular elementos con JavaScript.</p>
+        </section>
+
+        <!-- Sección 5: Semántica -->
+        <section id="semantica">
+            <h2>5. Semántica para Significado y Accesibilidad</h2>
+            
+            <p>La <strong>semántica</strong> en HTML se refiere al uso de etiquetas que describen el significado del contenido que encierran, en lugar de solo su apariencia. Usar etiquetas semánticas ayuda tanto a los navegadores como a los motores de búsqueda (SEO) a entender la estructura y el propósito del contenido, y es crucial para la <strong>accesibilidad</strong> web.</p>
+
+            <div class="definition">
+                <strong>Definición: Semántica HTML</strong>
+                <p>La <strong>semántica HTML</strong> es el uso de etiquetas HTML que comunican el significado inherente del contenido, más allá de su simple presentación visual.</p>
+            </div>
+
+            <div class="definition">
+                <strong>Definición: Accesibilidad Web</strong>
+                <p>La <strong>accesibilidad web</strong> asegura que las personas con discapacidades (visuales, auditivas, motoras, cognitivas) puedan percibir, entender, navegar e interactuar con la web.</p>
+            </div>
+
+            <h3>Etiquetas Semánticas de HTML5</h3>
+            <p>Antes, se usaban mucho <code>&lt;div&gt;</code> y <code>&lt;span&gt;</code> para todo. Ahora, HTML5 introduce etiquetas semánticas más específicas:</p>
+
+            <ul>
+                <li><strong>&lt;header&gt;:</strong> Contiene información introductoria o de navegación (logo, título principal, menú).</li>
+                <li><strong>&lt;nav&gt;:</strong> Representa una sección de enlaces de navegación.</li>
+                <li><strong>&lt;main&gt;:</strong> Especifica el contenido principal y único del documento. Debe haber solo uno por página.</li>
+                <li><strong>&lt;article&gt;:</strong> Contenido independiente y autocontenido (ej. una publicación de blog, un artículo de noticias).</li>
+                <li><strong>&lt;section&gt;:</strong> Una sección genérica temática dentro de un documento.</li>
+                <li><strong>&lt;aside&gt;:</strong> Contenido relacionado tangencialmente con el contenido principal (ej. barras laterales, notas al pie).</li>
+                <li><strong>&lt;footer&gt;:</strong> Contiene información del pie de página (autor, derechos de autor, enlaces de contacto).</li>
+            </ul>
+
+            <h3>Ejemplo de Estructura Semántica</h3>
+            <pre><code>&lt;body&gt;
+  &lt;header&gt;
+    &lt;img src="logo.png" alt="Logo Empresa"&gt;
+    &lt;nav&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href="#inicio"&gt;Inicio&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#productos"&gt;Productos&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#contacto"&gt;Contacto&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/nav&gt;
+  &lt;/header&gt;
+
+  &lt;main&gt;
+    &lt;article&gt;
+      &lt;h1&gt;Título del Artículo Principal&lt;/h1&gt;
+      &lt;p&gt;Contenido del artículo...&lt;/p&gt;
+      &lt;section&gt;
+        &lt;h2&gt;Subsección Relevante&lt;/h2&gt;
+        &lt;p&gt;Detalles de la subsección.&lt;/p&gt;
+      &lt;/section&gt;
+    &lt;/article&gt;
+    &lt;aside&gt;
+      &lt;h3&gt;Publicidad&lt;/h3&gt;
+      &lt;p&gt;Anuncios relacionados.&lt;/p&gt;
+    &lt;/aside&gt;
+  &lt;/main&gt;
+
+  &lt;footer&gt;
+    &lt;p&gt;&copy; 2023 Mi Empresa. Todos los derechos reservados.&lt;/p&gt;
+  &lt;/footer&gt;
+&lt;/body&gt;</code></pre>
+
+            <p>El uso de estas etiquetas ayuda a los lectores de pantalla a interpretar la estructura de la página (por ejemplo, identificar rápidamente la navegación principal o el contenido principal) y a los motores de búsqueda a indexar mejor el contenido.</p>
+        </section>
+
+        <!-- Sección 6: No es Programación -->
+        <section id="programacion">
+            <h2>6. No es un Lenguaje de Programación</h2>
+            
+            <p>Es crucial entender que HTML no es un lenguaje de programación. Los lenguajes de programación (como JavaScript, Python, Java) permiten realizar operaciones lógicas, tomar decisiones (condicionales), repetir acciones (bucles) y manipular datos de forma dinámica. HTML, por otro lado, se enfoca exclusivamente en <strong>marcar y estructurar el contenido</strong>.</p>
+
+            <div class="definition">
+                <strong>Definición: Lenguaje de Programación</strong>
+                <p>Un <strong>lenguaje de programación</strong> es un conjunto formal de instrucciones y reglas sintácticas que permiten a un programador escribir código para controlar el comportamiento de una máquina (computadora).</p>
+            </div>
+
+            <h3>Diferencia entre HTML y Lenguajes de Programación</h3>
+            <ul>
+                <li><strong>HTML:</strong> Define qué es el contenido (un título, un párrafo, una imagen).</li>
+                <li><strong>Lenguaje de Programación (ej. JavaScript):</strong> Define qué hacer con el contenido o cómo interactuar con él (ej. "cuando el usuario haga clic en este botón, muestra una alerta", "calcula la suma de estos dos números").</li>
+            </ul>
+
+            <p>HTML se combina con lenguajes de programación como JavaScript para crear páginas web dinámicas e interactivas. CSS se usa para estilizar, HTML para estructurar, y JavaScript para la interactividad.</p>
+
+            <pre><code>&lt;!-- Esto es HTML - Define la estructura --&gt;
+&lt;button id="miBoton"&gt;Haz clic aquí&lt;/button&gt;
+&lt;p id="mensaje"&gt;&lt;/p&gt;
+
+&lt;!-- Esto es JavaScript - Define la lógica/interactividad --&gt;
+&lt;script&gt;
+  document.getElementById("miBoton").onclick = function() {
+    document.getElementById("mensaje").innerText = "¡Has hecho clic!";
+  };
+&lt;/script&gt;</code></pre>
+
+            <p>En el ejemplo anterior, HTML crea el botón y el párrafo. JavaScript escucha el evento "clic" en el botón y, cuando ocurre, modifica el contenido del párrafo. HTML por sí solo no podría realizar esta acción interactiva.</p>
+        </section>
+
+        <!-- Sección 7: W3C -->
+        <section id="w3c">
+            <h2>7. Estándar Web Mantenido por W3C</h2>
+            
+            <p>HTML es un estándar web, lo que significa que hay un conjunto de reglas y especificaciones que definen cómo debe funcionar. Este estándar es desarrollado y mantenido por el <strong>World Wide Web Consortium (W3C)</strong>, una organización internacional que establece las directrices para la web.</p>
+
+            <div class="definition">
+                <strong>Definición: W3C (World Wide Web Consortium)</strong>
+                <p>El <strong>W3C</strong> es la principal organización de estandarización de la World Wide Web. Desarrolla recomendaciones y directrices sobre tecnologías web, asegurando la interoperabilidad y la accesibilidad.</p>
+            </div>
+
+            <h3>Importancia del Estándar W3C</h3>
+            <p>El W3C publica diferentes <strong>especificaciones</strong> para las versiones de HTML (actualmente HTML5 es la versión más reciente y ampliamente adoptada). Estas especificaciones aseguran que:</p>
+            <ul>
+                <li>Los navegadores web (Chrome, Firefox, Safari, Edge) interpreten el código HTML de manera consistente.</li>
+                <li>Las páginas web funcionen correctamente en diferentes dispositivos y plataformas.</li>
+                <li>Se promueva la accesibilidad y la usabilidad de la web.</li>
+            </ul>
+
+            <p>La adhesión a los estándares del W3C ayuda a crear una web más robusta, predecible y accesible para todos. Cuando un nuevo elemento o atributo se introduce en HTML, pasa por un proceso de desarrollo y consenso dentro del W3C antes de ser adoptado como estándar.</p>
+        </section>
+
+        <!-- Sección 8: Base para CSS y JavaScript -->
+        <section id="frontend">
+            <h2>8. Base para CSS y JavaScript</h2>
+            
+            <p>HTML, CSS y JavaScript son las tres tecnologías fundamentales del desarrollo web frontend. Cada una tiene un rol específico pero interdependiente:</p>
+
+            <ul>
+                <li><strong>HTML:</strong> Proporciona la <strong>estructura</strong> y el contenido semántico.</li>
+                <li><strong>CSS:</strong> Se encarga de la <strong>presentación</strong> y el estilo visual (colores, fuentes, diseño, layout).</li>
+                <li><strong>JavaScript:</strong> Añade <strong>interactividad</strong> y comportamiento dinámico a la página.</li>
+            </ul>
+
+            <div class="definition">
+                <strong>Definición: Frontend</strong>
+                <p>El <strong>Frontend</strong> (o lado del cliente) se refiere a todo lo que el usuario ve e interactúa directamente en su navegador web.</p>
+            </div>
+
+            <h3>Sinergia entre HTML, CSS y JavaScript</h3>
+            <p>Sin HTML, no habría nada que estilizar con CSS ni nada con lo que interactuar con JavaScript. HTML es el lienzo sobre el cual trabajan las otras dos tecnologías.</p>
+
+            <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;HTML, CSS, JS&lt;/title&gt;
+    &lt;!-- Enlace a un archivo CSS externo --&gt;
+    &lt;link rel="stylesheet" href="estilos.css"&gt; 
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;!-- HTML: Estructura --&gt;
+    &lt;h1 id="titulo-principal"&gt;Mi Página Web&lt;/h1&gt;
+    &lt;button&gt;Haz clic&lt;/button&gt;
+
+    &lt;!-- JavaScript: Lógica --&gt;
+    &lt;script src="script.js"&gt;&lt;/script&gt; 
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+            <h3>Cómo Trabajan Juntas</h3>
+            <ul>
+                <li><code>estilos.css</code> (archivo CSS) usaría el <code>id="titulo-principal"</code> para cambiar el color y tamaño de la fuente del <code>&lt;h1&gt;</code>.</li>
+                <li><code>script.js</code> (archivo JavaScript) podría añadir una funcionalidad al botón, como mostrar un mensaje cuando se hace clic.</li>
+            </ul>
+
+            <p>La sinergia entre estas tres tecnologías es lo que permite crear experiencias web ricas y complejas.</p>
+        </section>
+
+        <!-- Sección 9: Etiquetas Comunes -->
+        <section id="etiquetas-comunes">
+            <h2>9. Tipos Comunes de Etiquetas</h2>
+            
+            <p>Existen cientos de etiquetas HTML, pero algunas son usadas con mucha más frecuencia y son esenciales para construir la mayoría de las páginas web. Conocerlas bien es un gran paso para dominar HTML.</p>
+
+            <h3>Encabezados (&lt;h1&gt; a &lt;h6&gt;)</h3>
+            <p>Definen títulos y subtítulos, organizando la jerarquía del contenido. <code>&lt;h1&gt;</code> es el más importante.</p>
+            <pre><code>&lt;h1&gt;Título Principal&lt;/h1&gt;
+&lt;h2&gt;Sección Importante&lt;/h2&gt;
+&lt;h3&gt;Subsección&lt;/h3&gt;</code></pre>
+
+            <h3>Párrafo (&lt;p&gt;)</h3>
+            <p>Contiene bloques de texto.</p>
+            <pre><code>&lt;p&gt;Este es un párrafo informativo.&lt;/p&gt;</code></pre>
+
+            <h3>Enlace (&lt;a&gt;)</h3>
+            <p>Crea hipervínculos a otras páginas o recursos. Requiere el atributo <code>href</code>.</p>
+            <pre><code>&lt;a href="otra_pagina.html"&gt;Ir a la otra página&lt;/a&gt;</code></pre>
+
+            <h3>Imagen (&lt;img&gt;)</h3>
+            <p>Inserta imágenes. Requiere <code>src</code> (fuente) y <code>alt</code> (texto alternativo). Es un elemento vacío.</p>
+            <pre><code>&lt;img src="logo.png" alt="Logo de la compañía"&gt;</code></pre>
+
+            <h3>Lista Desordenada (&lt;ul&gt;)</h3>
+            <p>Crea listas con viñetas. Sus elementos hijos son <code>&lt;li&gt;</code>.</p>
+            <pre><code>&lt;ul&gt;
+    &lt;li&gt;Elemento 1&lt;/li&gt;
+    &lt;li&gt;Elemento 2&lt;/li&gt;
+    &lt;li&gt;Elemento 3&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+
+            <h3>Lista Ordenada (&lt;ol&gt;)</h3>
+            <p>Crea listas numeradas. También usa <code>&lt;li&gt;</code> para sus elementos.</p>
+            <pre><code>&lt;ol&gt;
+    &lt;li&gt;Primer paso&lt;/li&gt;
+    &lt;li&gt;Segundo paso&lt;/li&gt;
+    &lt;li&gt;Tercer paso&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+
+            <h3>División (&lt;div&gt;)</h3>
+            <p>Un contenedor genérico de bloque. Se usa para agrupar elementos y aplicarles estilos o scripts.</p>
+            <pre><code>&lt;div class="contenedor"&gt;
+    &lt;p&gt;Contenido dentro de la división&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+
+            <h3>Span (&lt;span&gt;)</h3>
+            <p>Un contenedor genérico de línea. Se usa para estilizar o manipular una parte pequeña de texto.</p>
+            <pre><code>&lt;p&gt;Este es un &lt;span style="color: red;"&gt;texto rojo&lt;/span&gt; dentro de un párrafo.&lt;/p&gt;</code></pre>
+
+            <h3>Formulario (&lt;form&gt;, &lt;input&gt;, &lt;button&gt;)</h3>
+            <p>Se usan para crear formularios interactivos donde los usuarios pueden ingresar información.</p>
+            <pre><code>&lt;form&gt;
+    &lt;label for="nombre"&gt;Nombre:&lt;/label&gt;
+    &lt;input type="text" id="nombre" name="nombre"&gt;
+    
+    &lt;label for="email"&gt;Email:&lt;/label&gt;
+    &lt;input type="email" id="email" name="email"&gt;
+    
+    &lt;button type="submit"&gt;Enviar&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+
+            <h3>Tabla (&lt;table&gt;, &lt;tr&gt;, &lt;td&gt;, &lt;th&gt;)</h3>
+            <p>Se usan para presentar datos de forma tabular.</p>
+            <pre><code>&lt;table&gt;
+    &lt;tr&gt;
+        &lt;th&gt;Nombre&lt;/th&gt;
+        &lt;th&gt;Edad&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Juan&lt;/td&gt;
+        &lt;td&gt;25&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;María&lt;/td&gt;
+        &lt;td&gt;30&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Guía Completa de HTML. Todos los derechos reservados.</p>
+        <p>Autor: Recursos Educativos</p>
+        <p>Última actualización: Marzo 2026</p>
+    </footer>
+</body>
+</html>
