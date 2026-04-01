@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acerca de Code Start - Conoce Nuestra Misión</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2rem 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        header h1 {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            font-size: 2.5rem;
+        }
+
+        nav {
+            background-color: #333;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav ul {
+            list-style: none;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+            font-size: 0.9rem;
+        }
+
+        nav a:hover {
+            background-color: #667eea;
+        }
+
+        main {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 20px;
+        }
+
+        section {
+            background: white;
+            margin-bottom: 2rem;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        section h2 {
+            color: #667eea;
+            margin-bottom: 1rem;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 0.5rem;
+        }
+
+        section h3 {
+            color: #764ba2;
+            margin-top: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        section h4 {
+            color: #764ba2;
+            margin-top: 1rem;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .definition {
+            background-color: #f0f4ff;
+            border-left: 4px solid #667eea;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 4px;
+        }
+
+        .definition strong {
+            color: #667eea;
+        }
+
+        ul, ol {
+            margin-left: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        .mission-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+            text-align: center;
+        }
+
+        .mission-box h3 {
+            color: white;
+            border-bottom: 2px solid rgba(255,255,255,0.3);
+            padding-bottom: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .mission-box p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .value-card {
+            background: linear-gradient(135deg, #f0f4ff 0%, #e8f4f8 100%);
+            border-left: 4px solid #667eea;
+            padding: 1.5rem;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+        }
+
+        .value-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 15px rgba(102, 126, 234, 0.2);
+        }
+
+        .value-icon {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .value-card h4 {
+            color: #667eea;
+            margin-bottom: 0.5rem;
+        }
+
+        .value-card p {
+            color: #666;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .feature-card {
+            background: white;
+            border: 2px solid #667eea;
+            border-radius: 8px;
+            padding: 1.5rem;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.2);
+            border-color: #764ba2;
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .feature-card h4 {
+            color: #667eea;
+            margin-bottom: 0.5rem;
+        }
+
+        .feature-card p {
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        .team-section {
+            background: linear-gradient(135deg, #f0f4ff 0%, #e8f4f8 100%);
+            padding: 2rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+            text-align: center;
+        }
+
+        .team-icon {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+        }
+
+        .team-section h3 {
+            color: #667eea;
+            margin-bottom: 1rem;
+        }
+
+        .timeline {
+            position: relative;
+            padding: 2rem 0;
+        }
+
+        .timeline-item {
+            margin-bottom: 2rem;
+            padding-left: 3rem;
+            position: relative;
+        }
+
+        .timeline-item:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 30px;
+            height: 30px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 50%;
+            border: 3px solid white;
+            box-shadow: 0 0 0 3px #667eea;
+        }
+
+        .timeline-item:not(:last-child):after {
+            content: '';
+            position: absolute;
+            left: 14px;
+            top: 30px;
+            width: 2px;
+            height: 50px;
+            background: #667eea;
+        }
+
+        .timeline-item h4 {
+            color: #667eea;
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-item p {
+            color: #666;
+            line-height: 1.5;
+        }
+
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+        }
+
+        .comparison-table th,
+        .comparison-table td {
+            border: 1px solid #ddd;
+            padding: 0.75rem;
+            text-align: left;
+        }
+
+        .comparison-table th {
+            background-color: #667eea;
+            color: white;
+        }
+
+        .comparison-table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        .why-choose {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+
+        .why-item {
+            background: #f0f4ff;
+            padding: 1.5rem;
+            border-radius: 6px;
+            border-left: 4px solid #667eea;
+        }
+
+        .why-item strong {
+            color: #667eea;
+            display: block;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .why-item p {
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        .cta-section h3 {
+            color: white;
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: white;
+            color: #667eea;
+            padding: 0.75rem 2rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            margin-top: 1rem;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .cta-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+
+        footer p {
+            margin: 0.5rem 0;
+        }
+
+        /* Menú de Navegación Global */
+        .global-nav {
+            background-color: #222;
+            padding: 0.5rem 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            margin-bottom: 2rem;
+            border-radius: 8px;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .nav-logo {
+            color: white;
+            font-weight: bold;
+            text-decoration: none;
+            font-size: 1.1rem;
+            margin-right: 2rem;
+            transition: color 0.3s ease;
+        }
+
+        .nav-logo:hover {
+            color: #667eea;
+        }
+
+        .nav-menu {
+            list-style: none;
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .nav-link {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 0.75rem;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            font-size: 0.95rem;
+        }
+
+        .nav-link:hover {
+            background-color: #667eea;
+            color: white;
+            transform: scale(1.05);
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8rem;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+
+            nav a {
+                font-size: 0.85rem;
+                padding: 0.4rem 0.8rem;
+            }
+
+            main {
+                padding: 0 15px;
+            }
+
+            section {
+                padding: 1.5rem;
+            }
+
+            .comparison-table {
+                font-size: 0.9rem;
+            }
+
+            .comparison-table th,
+            .comparison-table td {
+                padding: 0.5rem;
+            }
+
+            .values-grid,
+            .features-grid,
+            .why-choose {
+                grid-template-columns: 1fr;
+            }
+
+            .timeline-item {
+                padding-left: 2.5rem;
+            }
+
+            .nav-container {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .nav-logo {
+                margin-right: 0;
+                margin-bottom: 0.5rem;
+            }
+
+            .nav-menu {
+                gap: 0.75rem;
+                justify-content: center;
+            }
+
+            .nav-link {
+                font-size: 0.85rem;
+                padding: 0.4rem 0.6rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<nav>
+        <a href="index.html">Inicio</a> |
+        <a href="html.html">HTML</a> |
+        <a href="css.html">CSS</a> |
+        <a href="java.html">Java</a> |
+        <a href="python.html">Python</a> |
+        <a href="privacidad.html">privacidad</a>
+        <a href="acercade.html">acerca de</a>
+    </nav>
+    <header>
+        <h1>ℹ️ Acerca de Code Start</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#que-es">Qué es Code Start</a></li>
+            <li><a href="#mision">Misión</a></li>
+            <li><a href="#valores">Nuestros Valores</a></li>
+            <li><a href="#caracteristicas">Características</a></li>
+            <li><a href="#por-que">Por Qué Elegirnos</a></li>
+            <li><a href="#historia">Nuestra Historia</a></li>
+            <li><a href="#equipo">El Equipo</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <!-- Sección 1: Qué es Code Start -->
+        <section id="que-es">
+            <h2>Qué es Code Start</h2>
+            
+            <p>Code Start es una plataforma creada con el propósito de <strong>enseñar programación desde cero</strong>, de manera clara, sencilla y accesible para cualquier persona. Esta página nace con la idea de ayudar a quienes desean iniciar en el mundo de la tecnología, pero no saben por dónde empezar o encuentran explicaciones demasiado complejas.</p>
+
+            <p>No somos una plataforma tradicional de cursos. Somos un espacio educativo diseñado específicamente para principiantes que buscan entender la programación de verdad, no solo memorizar código.</p>
+
+            <div class="definition">
+                <strong>Code Start es para Ti si:</strong>
+                <ul style="margin-top: 0.5rem; margin-left: 1rem;">
+                    <li>Nunca has programado antes</li>
+                    <li>Quieres aprender a desarrollar páginas web</li>
+                    <li>Necesitas explicaciones claras y detalladas</li>
+                    <li>Prefieres aprender a tu propio ritmo</li>
+                    <li>Quieres ejemplos prácticos que funcionan</li>
+                </ul>
+            </div>
+
+            <h3>¿Qué Encontrarás?</h3>
+            <ul>
+                <li>Tutoriales paso a paso sobre lenguajes web</li>
+                <li>Explicaciones detalladas y comprensibles</li>
+                <li>Ejemplos de código que puedes probar inmediatamente</li>
+                <li>Contenido organizado de forma progresiva</li>
+                <li>Recursos útiles para tu aprendizaje</li>
+            </ul>
+        </section>
+
+        <!-- Sección 2: Misión -->
+        <section id="mision">
+            <h2>Nuestra Misión</h2>
+            
+            <div class="mission-box">
+                <h3>🎯 Democratizar la Educación en Programación</h3>
+                <p>Hacer que la programación sea accesible, comprensible y emocionante para todos, sin barreras económicas ni de experiencia previa.</p>
+            </div>
+
+            <p>El objetivo principal de Code Start es <strong>facilitar el aprendizaje de lenguajes de programación</strong> como HTML, CSS, JavaScript, Python y Java, proporcionando:</p>
+
+            <div class="values-grid">
+                <div class="value-card">
+                    <span class="value-icon">📚</span>
+                    <h4>Contenido Bien Explicado</h4>
+                    <p>Explicaciones claras que no asumen conocimiento previo. Cada concepto se explica desde cero.</p>
+                </div>
+
+                <div class="value-card">
+                    <span class="value-icon">💻</span>
+                    <h4>Ejemplos Prácticos</h4>
+                    <p>Código que funciona y que puedes modificar para entender mejor cada concepto.</p>
+                </div>
+
+                <div class="value-card">
+                    <span class="value-icon">🚀</span>
+                    <h4>Recursos Útiles</h4>
+                    <p>Herramientas y referencias que te ayudan a aprender de forma más efectiva.</p>
+                </div>
+
+                <div class="value-card">
+                    <span class="value-icon">📈</span>
+                    <h4>Progresión Gradual</h4>
+                    <p>Contenido organizado para que avances paso a paso sin sentirte abrumado.</p>
+                </div>
+            </div>
+
+            <h3>Lo Que Buscamos</h3>
+            <p>En Code Start no solo queremos que memorices código. Queremos que <strong>realmente entiendas cómo funciona la programación</strong>. Creemos que la comprensión profunda es la base para convertirse en un buen programador.</p>
+        </section>
+
+        <!-- Sección 3: Nuestros Valores -->
+        <section id="valores">
+            <h2>Nuestros Valores</h2>
+            
+            <p>Code Start fue construida sobre ciertos valores fundamentales que guían cada decisión que tomamos:</p>
+
+            <div class="values-grid">
+                <div class="value-card">
+                    <span class="value-icon">🎓</span>
+                    <h4>Educación Accesible</h4>
+                    <p>Creemos que la educación en programación debe estar disponible para todos, sin importar su trasfondo económico o experiencia.</p>
+                </div>
+
+                <div class="value-card">
+                    <span class="value-icon">🔍</span>
+                    <h4>Claridad</h4>
+                    <p>Explicamos conceptos complejos de forma simple. Evitamos jerga innecesaria y siempre buscamos la claridad.</p>
+                </div>
+
+                <div class="value-card">
+                    <span class="value-icon">💡</span>
+                    <h4>Entendimiento</h4>
+                    <p>No queremos que solo copies código. Queremos que entiendas por qué funciona de esa manera.</p>
+                </div>
+
+                <div class="value-card">
+                    <span class="value-icon">🤝</span>
+                    <h4>Comunidad</h4>
+                    <p>Creemos en el poder de la comunidad. Aprendemos juntos, nos apoyamos mutuamente y crecemos como grupo.</p>
+                </div>
+
+                <div class="value-card">
+                    <span class="value-icon">📊</span>
+                    <h4>Calidad</h4>
+                    <p>Todo el contenido es revisado cuidadosamente para asegurar que sea preciso, útil y bien estructurado.</p>
+                </div>
+
+                <div class="value-card">
+                    <span class="value-icon">🌱</span>
+                    <h4>Crecimiento Continuo</h4>
+                    <p>La tecnología cambia constantemente. Nos comprometemos a mantener nuestro contenido actualizado y relevante.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección 4: Características -->
+        <section id="caracteristicas">
+            <h2>Características Principales</h2>
+            
+            <p>Code Start ofrece características diseñadas específicamente para optimizar tu experiencia de aprendizaje:</p>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <span class="feature-icon">📖</span>
+                    <h4>Tutoriales Estructurados</h4>
+                    <p>Cada tema está organizado lógicamente, construyendo sobre conocimientos anteriores.</p>
+                </div>
+
+                <div class="feature-card">
+                    <span class="feature-icon">💻</span>
+                    <h4>Ejemplos Funcionales</h4>
+                    <p>Todo el código que encuentras aquí es código real que funciona y que puedes probar.</p>
+                </div>
+
+                <div class="feature-card">
+                    <span class="feature-icon">📊</span>
+                    <h4>Explicaciones Visuales</h4>
+                    <p>Usamos tablas, diagramas y gráficos para hacer los conceptos más comprensibles.</p>
+                </div>
+
+                <div class="feature-card">
+                    <span class="feature-icon">🎯</span>
+                    <h4>Enfoque Práctico</h4>
+                    <p>Aprendes haciendo. Cada concepto viene con ejemplos que puedes probar inmediatamente.</p>
+                </div>
+
+                <div class="feature-card">
+                    <span class="feature-icon">🚀</span>
+                    <h4>Sin Requisitos Previos</h4>
+                    <p>No necesitas experiencia previa. Comenzamos desde los conceptos más básicos.</p>
+                </div>
+
+                <div class="feature-card">
+                    <span class="feature-icon">⏰</span>
+                    <h4>Tu Propio Ritmo</h4>
+                    <p>Aprende cuando quieras, a la velocidad que desees. No hay límite de tiempo.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección 5: Por Qué Elegirnos -->
+        <section id="por-que">
+            <h2>¿Por Qué Elegir Code Start?</h2>
+            
+            <p>Existen muchos recursos para aprender programación. Aquí te mostramos qué nos hace diferente:</p>
+
+            <div class="why-choose">
+                <div class="why-item">
+                    <strong>✓ Beginner-Friendly</strong>
+                    <p>Diseñado específicamente para principiantes absolutos.</p>
+                </div>
+
+                <div class="why-item">
+                    <strong>✓ Explicaciones Claras</strong>
+                    <p>Sin jerga técnica innecesaria. Habla como lo haría un buen profesor.</p>
+                </div>
+
+                <div class="why-item">
+                    <strong>✓ Ejemplos Reales</strong>
+                    <p>Todo el código es útil y aplicable en el mundo real.</p>
+                </div>
+
+                <div class="why-item">
+                    <strong>✓ 100% Gratuito</strong>
+                    <p>Todo el contenido es completamente gratuito. Sin suscripciones ocultas.</p>
+                </div>
+
+                <div class="why-item">
+                    <strong>✓ Actualizado</strong>
+                    <p>El contenido se mantiene actualizado con las mejores prácticas actuales.</p>
+                </div>
+
+                <div class="why-item">
+                    <strong>✓ Comunidad</strong>
+                    <p>Eres parte de una comunidad de personas que aprenden y se ayudan mutuamente.</p>
+                </div>
+            </div>
+
+            <h3>Comparativa con Otros Recursos</h3>
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Característica</th>
+                        <th>Code Start</th>
+                        <th>Cursos en Línea Típicos</th>
+                        <th>Tutoriales Generales</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Para Principiantes</td>
+                        <td>✓ Excelente</td>
+                        <td>✓ Bueno</td>
+                        <td>✗ Variable</td>
+                    </tr>
+                    <tr>
+                        <td>Costo</td>
+                        <td>✓ Gratuito</td>
+                        <td>✗ Pagado</td>
+                        <td>✓ Gratuito</td>
+                    </tr>
+                    <tr>
+                        <td>Explicaciones Claras</td>
+                        <td>✓ Muy Claras</td>
+                        <td>✓ Claras</td>
+                        <td>✗ Varía</td>
+                    </tr>
+                    <tr>
+                        <td>Ejemplos Prácticos</td>
+                        <td>✓ Abundantes</td>
+                        <td>✓ Muchos</td>
+                        <td>✗ Pocos</td>
+                    </tr>
+                    <tr>
+                        <td>Contenido Estructurado</td>
+                        <td>✓ Muy Bien</td>
+                        <td>✓ Bien</td>
+                        <td>✗ Desordenado</td>
+                    </tr>
+                    <tr>
+                        <td>Actualización</td>
+                        <td>✓ Constante</td>
+                        <td>✗ A veces</td>
+                        <td>✗ Variable</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Sección 6: Nuestra Historia -->
+        <section id="historia">
+            <h2>Nuestra Historia</h2>
+            
+            <p>Code Start nace de una pasión simple: hacer que la programación sea accesible para todos.</p>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h4>La Idea</h4>
+                    <p>Todo comenzó cuando alguien apasionado por la tecnología y el aprendizaje decidió que quería compartir sus conocimientos de una forma diferente, más accesible y comprensible.</p>
+                </div>
+
+                <div class="timeline-item">
+                    <h4>La Investigación</h4>
+                    <p>Se investigó qué hace difícil aprender programación para los principiantes. Se encontró que las explicaciones complejas y la falta de estructura eran problemas principales.</p>
+                </div>
+
+                <div class="timeline-item">
+                    <h4>La Visión</h4>
+                    <p>Nació la idea de crear una plataforma donde cada concepto fuera explicado de forma simple, con ejemplos abundantes y una estructura clara.</p>
+                </div>
+
+                <div class="timeline-item">
+                    <h4>El Desarrollo</h4>
+                    <p>Se crearon guías detalladas, ejemplos de código prácticos y recursos útiles. Cada sección fue cuidadosamente diseñada para optimizar el aprendizaje.</p>
+                </div>
+
+                <div class="timeline-item">
+                    <h4>El Lanzamiento</h4>
+                    <p>Code Start fue lanzada públicamente con la misión de ayudar a miles de personas a comenzar su viaje en la programación.</p>
+                </div>
+
+                <div class="timeline-item">
+                    <h4>El Presente</h4>
+                    <p>Hoy, Code Start continúa creciendo, mejorando y ayudando a más personas a descubrir el emocionante mundo de la programación.</p>
+                </div>
+
+                <div class="timeline-item">
+                    <h4>El Futuro</h4>
+                    <p>Planeamos expandir nuestro contenido con más lenguajes, frameworks y tecnologías. Tu feedback nos ayuda a mejorar continuamente.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección 7: El Equipo -->
+        <section id="equipo">
+            <h2>El Equipo Detrás de Code Start</h2>
+            
+            <div class="team-section">
+                <div class="team-icon">👨‍💻</div>
+                <h3>Apasionado por la Tecnología</h3>
+                <p>Detrás de Code Start hay una persona (o un pequeño equipo) apasionada por la tecnología y el aprendizaje continuo. Nuestro compromiso es compartir conocimientos de una forma más sencilla y comprensible.</p>
+            </div>
+
+            <h3>Nuestro Compromiso</h3>
+            <ul>
+                <li><strong>Dedicación:</strong> Dedicamos tiempo y esfuerzo a crear contenido de calidad</li>
+                <li><strong>Pasión:</strong> Nos apasiona ver a otros aprender y crecer</li>
+                <li><strong>Mejora Continua:</strong> Siempre buscamos mejorar nuestro contenido</li>
+                <li><strong>Respeto:</strong> Respetamos el tiempo y la inteligencia de nuestros usuarios</li>
+                <li><strong>Transparencia:</strong> Somos honestos sobre lo que sabemos y no sabemos</li>
+            </ul>
+
+            <h3>Por Qué Hacemos Esto</h3>
+            <p>No hacemos Code Start por dinero. Hacemos esto porque creemos que la educación en programación debe ser accesible para todos. Queremos vivir en un mundo donde cualquier persona con curiosidad y motivación pueda aprender a programar, sin importar su situación económica.</p>
+        </section>
+
+        <!-- Sección 8: Contacto y CTA -->
+        <section id="contacto">
+            <h2>Conecta Con Nosotros</h2>
+            
+            <p>¿Tienes preguntas, sugerencias o simplemente quieres decir hola? Nos encantaría escucharte.</p>
+
+            <div class="definition">
+                <strong>Tu Feedback es Valioso</strong>
+                <p>Queremos saber qué piensas sobre Code Start. ¿Hay temas que quieras que cubramos? ¿Hay algo que se podría mejorar? Tu opinión nos ayuda a hacer que Code Start sea mejor para todos.</p>
+            </div>
+
+            <h3>Formas de Contactarnos</h3>
+            <ul>
+                <li><strong>Email:</strong> Puedes enviarme un correo con tus preguntas o sugerencias</li>
+                <li><strong>Redes Sociales:</strong> Síguenos en nuestras redes sociales para actualizaciones</li>
+                <li><strong>Comentarios:</strong> Déjanos tus comentarios en las páginas de contenido</li>
+            </ul>
+
+            <div class="cta-section">
+                <h3>¿Listo Para Comenzar Tu Viaje?</h3>
+                <p>Si deseas aprender, mejorar tus habilidades o comenzar tu camino en la programación, Code Start es un buen lugar para empezar.</p>
+                <a href="index.html" class="cta-button">Explorar Guías →</a>
+                <a href="codestart.html" class="cta-button">Conoce Code Start →</a>
+            </div>
+        </section>
+
+        <!-- Sección Final: Llamada a la Acción -->
+        <section>
+            <h2>Gracias Por Visitarnos</h2>
+            
+            <p style="text-align: center; font-size: 1.1rem; line-height: 1.8;">
+                Code Start existe gracias a personas como tú que valoran la educación y quieren aprender. 
+                <br><br>
+                <strong>Tu viaje en la programación comienza aquí.</strong>
+            </p>
+
+            <div class="definition">
+                <strong>Un Último Pensamiento</strong>
+                <p>La programación no es difícil. Solo necesita ser enseñada correctamente. En Code Start, nos aseguramos de hacerlo. Así que, sin importar cuáles sean tus habilidades actuales, estamos aquí para ayudarte a aprender, crecer y alcanzar tus objetivos en la tecnología.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Code Start. Todos los derechos reservados.</p>
+        <p>Dedicado a democratizar la educación en programación</p>
+        <p>Última actualización: Marzo 2026</p>
+    </footer>
+</body>
+</html>
